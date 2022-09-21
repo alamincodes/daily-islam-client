@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import Logo from '../Images/icons/logo.svg';
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
@@ -10,9 +11,10 @@ const Navbar = () => {
   return (
     <div className="w-full h-[90px] bg-white sticky shadow-md">
       <div className=" max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
-        <div>
-          <h1 className="text-black">ISLAMIC DAY</h1>
-        </div>
+        <Link to="/"><div className="flex justify-center items-center">
+          <h1 className="text-black"> DAILY ISLAM</h1>
+          <img src={Logo} className="w-12" alt="" />
+        </div></Link>
         <div className="hidden md:flex">
           <ul className="flex text-black items-center cursor-pointer">
           <li className="hover:bg-black hover:text-white rounded-lg">

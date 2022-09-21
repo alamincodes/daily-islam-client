@@ -14,7 +14,7 @@ const Banner = () => {
         <div>
           <img
             src={BannerBg}
-            className="lg:w-[500px] w-[400px] aspect-video rounded-2xl "
+            className="lg:w-[500px] w-[350px] aspect-video rounded-2xl "
             alt=""
           />
         </div>
