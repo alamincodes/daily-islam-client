@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import Logo from '../Images/icons/logo.svg';
+import Logo from "../Images/icons/logo.svg";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
@@ -11,27 +11,51 @@ const Navbar = () => {
   return (
     <div className="w-full h-[90px] bg-white sticky shadow-md">
       <div className=" max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
-        <Link to="/"><div className="flex justify-center items-center">
-          <h1 className="text-black"> DAILY ISLAM</h1>
-          <img src={Logo} className="w-12" alt="" />
-        </div></Link>
+        <Link to="/">
+          <div className="flex justify-center items-center">
+            <h1 className="text-black"> DAILY ISLAM</h1>
+            <img src={Logo} className="w-12" alt="" />
+          </div>
+        </Link>
         <div className="hidden md:flex">
           <ul className="flex text-black items-center cursor-pointer">
-          <li className="hover:bg-black hover:text-white rounded-lg">
-             <Link to="/">হোম</Link>
-            </li>
-            <li className="hover:bg-black hover:text-white rounded-lg">
-             <Link to="/namaj">নামাজ</Link>
-            </li>
-            <li className="hover:bg-black hover:text-white rounded-lg"> <Link to="/duya">দোয়া</Link></li>
-            <li className="hover:bg-black hover:text-white rounded-lg">
-            <Link to="/jikir">যিকির</Link>
-            </li>
-            <li className="hover:bg-black hover:text-white rounded-lg">
-            <Link to="/hadis">হাদিস</Link>
-            </li>
-            <li className="hover:bg-black hover:text-white rounded-lg"> <Link to="/sura">সূরা</Link></li>
-            <li className="hover:bg-black hover:text-white rounded-lg"> <Link to="/allah">আল্লাহর নাম</Link></li>
+            <Link to="/">
+              <li className="hover:bg-black hover:text-white rounded-lg">
+                হোম
+              </li>
+            </Link>
+            <Link to="/namaj">
+              <li className="hover:bg-black hover:text-white rounded-lg">
+                নামাজ
+              </li>
+            </Link>
+            <Link to="/duya">
+              <li className="hover:bg-black hover:text-white rounded-lg">
+                দোয়া
+              </li>
+            </Link>
+            <Link to="/jikir">
+              <li className="hover:bg-black hover:text-white rounded-lg">
+                যিকির
+              </li>
+            </Link>
+            <Link to="/hadis">
+              <li className="hover:bg-black hover:text-white rounded-lg">
+                হাদিস
+              </li>
+            </Link>
+            <Link to="/sura">
+              <li className="hover:bg-black hover:text-white rounded-lg">
+                {" "}
+                সূরা
+              </li>
+            </Link>
+            <Link to="/allah">
+              <li className="hover:bg-black hover:text-white rounded-lg">
+                {" "}
+                আল্লাহর নাম
+              </li>
+            </Link>
           </ul>
         </div>
 
@@ -54,21 +78,44 @@ const Navbar = () => {
           }
         >
           <ul>
-          <li className="hover:bg-white hover:text-black rounded-lg">
-             <Link to="/">হোম</Link>
-            </li>
-            <li className="hover:bg-white hover:text-black rounded-lg">
-             <Link to="/namaj">নামাজ</Link>
-            </li>
-            <li className="hover:bg-white hover:text-black rounded-lg"> <Link to="/duya">দোয়া</Link></li>
-            <li className="hover:bg-white hover:text-black rounded-lg">
-            <Link to="/jikir">যিকির</Link>
-            </li>
-            <li className="hover:bg-white hover:text-black rounded-lg">
-            <Link to="/hadis">হাদিস</Link>
-            </li>
-            <li className="hover:bg-white hover:text-black rounded-lg"> <Link to="/sura">সূরা</Link></li>
-            <li className="hover:bg-white hover:text-black rounded-lg"> <Link to="/allah">আল্লাহর নাম</Link></li>
+            <Link to="/">
+              <li className="hover:bg-white hover:text-black rounded-lg">
+                হোম
+              </li>
+            </Link>
+            <Link to="/namaj">
+              <li className="hover:bg-white hover:text-black rounded-lg">
+                নামাজ
+              </li>
+            </Link>
+            <Link to="/duya">
+              <li className="hover:bg-white hover:text-black rounded-lg">
+                {" "}
+                দোয়া
+              </li>
+            </Link>{" "}
+            <Link to="/jikir">
+              <li className="hover:bg-white hover:text-black rounded-lg">
+                যিকির
+              </li>
+            </Link>
+            <Link to="/hadis">
+              <li className="hover:bg-white hover:text-black rounded-lg">
+                হাদিস
+              </li>
+            </Link>
+            <Link to="/sura">
+              <li className="hover:bg-white hover:text-black rounded-lg">
+                {" "}
+                সূরা
+              </li>
+            </Link>
+            <Link to="/allah">
+              <li className="hover:bg-white hover:text-black rounded-lg">
+                {" "}
+                আল্লাহর নাম
+              </li>
+            </Link>
           </ul>
         </div>
       </div>

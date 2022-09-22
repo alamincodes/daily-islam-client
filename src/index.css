@@ -2,12 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection{
+  background: black;
+  color: whitesmoke
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black; 
 
-:root{
-  --primary-blue: #00d8ff;
-  --primary-purple: #6a00ff;
 }
 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: black; 
+}
 
 @layer base {
 

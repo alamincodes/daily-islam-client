@@ -13,7 +13,7 @@ const AllahName = ({ allahName }) => {
           className="text-center text-red-500  text-[15px] cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <button className="bg-purple-700 text-white px-4 py-1  rounded-full transform hover:scale-105 ">Close</button> : <button className="bg-red-500 text-white px-2 py-1  rounded-full transform hover:scale-105 duration-100">see more</button>}
+          {isOpen ? <button className="bg-purple-700 text-white px-4 py-1  rounded-full  hover:scale-105 duration-150">Close</button> : <button className="bg-red-500 text-white px-2 py-1  rounded-full hover:scale-105 duration-150">see more</button>}
         </p>
         {isOpen && (
           <div>
