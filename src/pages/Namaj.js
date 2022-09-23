@@ -5,8 +5,7 @@ const Namaj = () => {
     <div>
       {NamajDuya.map((namaj) => (
         <details class="group my-3">
-          
-          <summary class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-white  shadow-[0_3px_10px_rgb(0,0,0,0.1)]">
+          <summary class="flex items-center  justify-between p-4 rounded-lg cursor-pointer bg-white  shadow-[0_3px_10px_rgb(0,0,0,0.1)]">
             <h5 class=" text-black md:text-2xl sm:text-[20px]">
               {namaj.title}
             </h5>
@@ -26,7 +25,6 @@ const Namaj = () => {
               />
             </svg>
           </summary>
-
           <p class="px-4 mt-4 leading-relaxed text-[19px] text-black font-semibold">
             {namaj.duyaArbi}
           </p>

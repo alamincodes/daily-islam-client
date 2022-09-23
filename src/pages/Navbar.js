@@ -36,7 +36,7 @@ const Navbar = () => {
             </Link>
             <Link to="/jikir">
               <li className="hover:bg-black hover:text-white rounded-lg">
-                যিকির
+              যিক্‌র
               </li>
             </Link>
             <Link to="/hadis">
@@ -79,7 +79,7 @@ const Navbar = () => {
         >
           <ul>
             <Link to="/">
-              <li className="hover:bg-white hover:text-black rounded-lg">
+              <li className="hover:bg-white hover:text-black rounded-lg my-1">
                 হোম
               </li>
             </Link>
@@ -96,7 +96,7 @@ const Navbar = () => {
             </Link>{" "}
             <Link to="/jikir">
               <li className="hover:bg-white hover:text-black rounded-lg">
-                যিকির
+              যিক্‌র
               </li>
             </Link>
             <Link to="/hadis">
@@ -111,7 +111,7 @@ const Navbar = () => {
               </li>
             </Link>
             <Link to="/allah">
-              <li className="hover:bg-white hover:text-black rounded-lg">
+              <li className="hover:bg-white hover:text-black mb-1 rounded-lg">
                 {" "}
                 আল্লাহর নাম
               </li>
