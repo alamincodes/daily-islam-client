@@ -8,13 +8,13 @@ const Banner = () => {
         <div className=" flex flex-col mx-10 ">
           <span className="my-4 font-bold text-center lg:text-4xl text-[25px]">আস-সালামু আলাইকুম</span>
          
-          <span className=" font-bold text-center md:text-2xl text-[20px]">"হে ঈমানদারগন! তোমরা আল্লাহকে অধিক পরিমানে স্মরন করো। আর সকাল-সন্ধায় তার পবিত্রতা ঘোষনা করো।"</span>
+          <span className=" font-bold text-center md:text-[20px] sm:text-[18px] lg:w-auto md:w-[500px] sm:w-[300px]">"হে ঈমানদারগন! তোমরা আল্লাহকে অধিক পরিমানে স্মরন করো। আর সকাল-সন্ধায় তার পবিত্রতা ঘোষনা করো।"</span>
         </div>
         {/* right */}
         <div>
           <img
             src={BannerBg}
-            className="lg:w-[500px] md:[500px] w-[330px] aspect-video rounded-2xl "
+            className="lg:w-[500px] md:[500px] sm:w-[330px] aspect-video rounded-2xl "
             alt=""
           />
         </div>

@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className=" max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
         <Link to="/">
           <div className="flex justify-center items-center">
-            <h1 className="text-black"> DAILY ISLAM</h1>
+            <h1 className="text-black md:text-3xl sm:text-2xl"> DAILY ISLAM</h1>
             <img src={Logo} className="w-12" alt="" />
           </div>
         </Link>

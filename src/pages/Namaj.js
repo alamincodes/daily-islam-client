@@ -5,8 +5,11 @@ const Namaj = () => {
     <div>
       {NamajDuya.map((namaj) => (
         <details class="group my-3">
+          
           <summary class="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-white  shadow-[0_3px_10px_rgb(0,0,0,0.1)]">
-            <h5 class="font-medium text-red-500 ">{namaj.title}</h5>
+            <h5 class=" text-black md:text-2xl sm:text-[20px]">
+              {namaj.title}
+            </h5>
 
             <svg
               class="flex-shrink-0 ml-1.5 w-5 h-5 transition duration-300 group-open:-rotate-180"
@@ -24,9 +27,15 @@ const Namaj = () => {
             </svg>
           </summary>
 
-          <p class="px-4 mt-4 leading-relaxed text-[19px] text-black font-semibold">{namaj.duyaArbi}</p>
-          <p class="px-4 mt-4 leading-relaxed text-[17px] text-green-500 font-bold">{namaj.duyaBangla}</p>
-          <p class="px-4 mt-4 leading-relaxed text-[17px] text-black">{namaj.meaning}</p>
+          <p class="px-4 mt-4 leading-relaxed text-[19px] text-black font-semibold">
+            {namaj.duyaArbi}
+          </p>
+          <p class="px-4 mt-4 leading-relaxed text-[17px] text-rose-500 font-bold">
+            {namaj.duyaBangla}
+          </p>
+          <p class="px-4 mt-4 leading-relaxed text-[17px] text-black">
+            {namaj.meaning}
+          </p>
         </details>
       ))}
     </div>

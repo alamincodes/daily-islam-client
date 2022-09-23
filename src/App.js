@@ -15,7 +15,7 @@ function App() {
     <StrictMode>
       <BrowserRouter>
         <Navbar />
-        <div className="sm:px-6  max-w-screen-xl lg:px-8 mx-auto">
+        <div className="sm:px-5  max-w-screen-xl lg:px-8 mx-auto">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/allah" element={<Allah />} />
