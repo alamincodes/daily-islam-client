@@ -8,7 +8,7 @@ const AllahName = ({ allahName }) => {
       <div className="bg-white shadow-[0_3px_10px_rgb(0,0,0,0.1)] p-2">
         <h2 className="text-center md:text-2xl sm:text-[24px]">{bangla}</h2>
         <h2 className="text-center md:text-2xl sm:text-[24px]">{arbi}</h2>
-        <h2 className="text-center md:text-2xl sm:text-[24px]">{meaning}</h2>
+        <h2 className="text-center md:text-2xl sm:text-[24px]">{meaning}</h2> 
         <p
           className="text-center text-red-500  text-[15px] cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}

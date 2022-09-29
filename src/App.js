@@ -24,7 +24,7 @@ function App() {
             <Route path="/hadis" element={<Hadis />} />
             <Route path="/jikir" element={<Jikir />} />
             <Route path="/sura" element={<Sura />} />
-          </Routes>
+          </Routes> 
         </div>
         <Footer/>
       </BrowserRouter>

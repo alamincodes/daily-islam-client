@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../Images/icons/logo.svg";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -8,54 +8,41 @@ const Navbar = () => {
     setNav(!nav);
   };
 
+  // active  navLink
+  const activeLink = "bg-black text-white rounded-lg  mx-2 ";
+  const normalLink = "";
+
+  const navbarNames = [
+    // { name: "হোম", link: "/" },
+    { name: "নামাজ", link: "/namaj" },
+    { name: "দোয়া", link: "/duya" },
+    { name: "যিক্‌র", link: "/jikir" },
+    { name: "হাদিস", link: "/hadis" },
+    { name: "আল্লাহর নাম", link: "/allah" },
+  ];
+
   return (
     <div className="w-full h-[90px] bg-white sticky shadow-md">
       <div className=" max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
-        <Link to="/">
+        <NavLink to="/">
           <div className="flex justify-center items-center">
             <h1 className="text-black md:text-3xl sm:text-2xl"> DAILY ISLAM</h1>
             <img src={Logo} className="w-12" alt="" />
           </div>
-        </Link>
+        </NavLink>
         <div className="hidden md:flex">
           <ul className="flex text-black items-center cursor-pointer">
-            <Link to="/">
-              <li className="hover:bg-black hover:text-white rounded-lg">
-                হোম
-              </li>
-            </Link>
-            <Link to="/namaj">
-              <li className="hover:bg-black hover:text-white rounded-lg">
-                নামাজ
-              </li>
-            </Link>
-            <Link to="/duya">
-              <li className="hover:bg-black hover:text-white rounded-lg">
-                দোয়া
-              </li>
-            </Link>
-            <Link to="/jikir">
-              <li className="hover:bg-black hover:text-white rounded-lg">
-              যিক্‌র
-              </li>
-            </Link>
-            <Link to="/hadis">
-              <li className="hover:bg-black hover:text-white rounded-lg">
-                হাদিস
-              </li>
-            </Link>
-            <Link to="/sura">
-              <li className="hover:bg-black hover:text-white rounded-lg">
-                {" "}
-                সূরা
-              </li>
-            </Link>
-            <Link to="/allah">
-              <li className="hover:bg-black hover:text-white rounded-lg">
-                {" "}
-                আল্লাহর নাম
-              </li>
-            </Link>
+         <NavLink to="/"> <li className="hover:bg-black hover:text-white rounded-lg">হোম</li></NavLink>
+          {/* navbar start namaj route */}
+            {navbarNames.map((navName) => (
+              <NavLink to={navName.link}
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+              >
+                <li className="hover:bg-black hover:text-white rounded-lg">{navName.name}</li>
+              </NavLink>
+            ))}
+
+            
           </ul>
         </div>
 
@@ -96,7 +83,7 @@ const Navbar = () => {
             </Link>{" "}
             <Link to="/jikir">
               <li className="hover:bg-white hover:text-black rounded-lg">
-              যিক্‌র
+                যিক্‌র
               </li>
             </Link>
             <Link to="/hadis">

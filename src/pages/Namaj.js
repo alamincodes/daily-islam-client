@@ -1,40 +1,43 @@
 import React from "react";
-import NamajDuya from "../NamajDuya.json";
+import Namajduya from "../NamajDuya.json";
+import NamajDuya from "./NamajDuya";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
+
 const Namaj = () => {
+  const videos = [
+    {
+      name: "কিভাবে ৪ রাকাত ফরজ নামাজের নিওম।",
+      link: "https://www.youtube.com/watch?v=bHDOQDzzKV8",
+    },
+    {
+      name: " বিতর নামাজ কিভাবে পড়তে হয়?",
+      link: "https://youtu.be/ShQEs3k5lps",
+    },
+  ];
   return (
     <div>
-      {NamajDuya.map((namaj) => (
-        <details class="group my-3">
-          <summary class="flex items-center  justify-between p-4 rounded-lg cursor-pointer bg-white  shadow-[0_3px_10px_rgb(0,0,0,0.1)]">
-            <h5 class=" text-black md:text-2xl sm:text-[20px]">
-              {namaj.title}
-            </h5>
+      {Namajduya.map((namaj) => (
+        <NamajDuya key={namaj.id} namaj={namaj} />
+      ))}
 
-            <svg
-              class="flex-shrink-0 ml-1.5 w-5 h-5 transition duration-300 group-open:-rotate-180"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
+      {/* --------video section-------- */}
+
+      {videos.map((video) => (
+        <div className="flex justify-between items-center bg-white shadow-[0_3px_10px_rgb(0,0,0,0.1)] py-4 rounded-lg px-2 md:text-2xl sm:text-[18px] my-3">
+          <h3>{video.name}</h3>
+          {/*====== video play button start=======*/}
+          <a href={video.link} target="_blank">
+            <div className="flex justify-center items-center bg-black  text-white py-2 hover:scale-105 duration-150 rounded-md px-5">
+              <h2>ভিডিও</h2>
+              <FontAwesomeIcon
+                icon={faPlay}
+                className="flex-shrink-0 ml-1.5 w-4 h-7 "
               />
-            </svg>
-          </summary>
-          <p class="px-4 mt-4 leading-relaxed text-[19px] text-black font-semibold">
-            {namaj.duyaArbi}
-          </p>
-          <p class="px-4 mt-4 leading-relaxed text-[17px] text-rose-500 font-bold">
-            {namaj.duyaBangla}
-          </p>
-          <p class="px-4 mt-4 leading-relaxed text-[17px] text-black">
-            {namaj.meaning}
-          </p>
-        </details>
+            </div>
+          </a>
+          {/* ====video play button end====== */}
+        </div>
       ))}
     </div>
   );
