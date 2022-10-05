@@ -4,7 +4,7 @@ const NamajDuya = ({ namaj }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <div className="bg-white shadow-[0_3px_10px_rgb(0,0,0,0.1)] px-2 rounded-lg">
+      <div className="bg-white shadow-[0_3px_10px_rgb(0,0,0,0.1)] px-2 rounded-lg focus:text-red-500 ">
         <div
           className=" flex justify-between items-center py-5 pl-2 cursor-pointer my-3"
           onClick={() => setIsOpen(!isOpen)}
@@ -32,7 +32,7 @@ const NamajDuya = ({ namaj }) => {
             <h3 className=" leading-relaxed text-[19px] text-black font-semibold">
               {namaj.duyaArbi}
             </h3>
-            <h3 className=" leading-relaxed text-[17px] text-rose-500 font-bold">
+            <h3 className=" leading-relaxed text-[17px] text-[#FF284F] font-bold">
               {namaj.duyaBangla}
             </h3>
             <h3 className=" leading-relaxed text-[17px] text-black">

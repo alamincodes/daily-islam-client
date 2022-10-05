@@ -60,7 +60,7 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? " w-full bg-black text-white absolute top-[90px] left-0 flex justify-center text-center"
+              ? " w-full bg-black text-white absolute top-[90px] left-0 flex justify-center text-center md:hidden"
               : "absolute left-[-100%]"
           }
         >

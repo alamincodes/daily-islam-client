@@ -38,7 +38,7 @@ const Cards = () => {
       <h3 className="text-center text-3xl mt-10">ফিচার</h3>
       {/* ----------time------------- */}
       <div className=" flex justify-between items-center shadow-[0_3px_10px_rgb(0,0,0,0.1)] md:py-3 py-5 ">
-        <div className="flex flex-col items-center border-l-4 border-r-4 border-r-rose-500 border-l-rose-500 md:mx-5 sm:mx-1 px-3">
+        <div className="flex flex-col items-center border-l-4 border-r-4 border-r-[#FF284F] border-l-[#FF284F] md:mx-5 sm:mx-1 px-3">
           <h4 className="md:text-3xl sm:text-[20px] font-bold">সময়</h4>
           <h2 className=" md:text-4xl sm:text-[15px] font-semibold md:tracking-[0.5rem] sm:tracking-[2px]">
             {currentTime}

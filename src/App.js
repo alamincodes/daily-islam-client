@@ -5,11 +5,15 @@ import { StrictMode } from "react";
 import Navbar from "./pages/Navbar";
 import Footer from "./pages/Footer";
 import Allah from "./pages/Allah";
-import Namaj from "./pages/Namaj";
+import Namaj from "./pages/NamajVideo";
 import Duya from "./pages/Duya";
 import Hadis from "./pages/Hadis";
-import Jikir from "./pages/Jikir";
+import Jikir from "./pages/Jikir/Jikir";
 import Sura from "./pages/Sura";
+import PageNotFound from "./pages/PageNotFound";
+import JikirDay from "./pages/Jikir/JikirDay";
+import JikirEvening from "./pages/Jikir/JikirEvening";
+import JukirNight from "./pages/Jikir/JukirNight";
 function App() {
   return (
     <StrictMode>
@@ -22,11 +26,17 @@ function App() {
             <Route path="/namaj" element={<Namaj />} />
             <Route path="/duya" element={<Duya />} />
             <Route path="/hadis" element={<Hadis />} />
-            <Route path="/jikir" element={<Jikir />} />
+            {/* jikir nested route */}
+            <Route path="/jikir" element={<Jikir />}>
+            <Route index element={<JikirDay />} />
+            <Route path="evening" element={<JikirEvening />} />
+            <Route path="night" element={<JukirNight />} />
+            </Route>
             <Route path="/sura" element={<Sura />} />
-          </Routes> 
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
         </div>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </StrictMode>
   );

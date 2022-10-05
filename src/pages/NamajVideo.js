@@ -6,17 +6,18 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 const Namaj = () => {
   const videos = [
-    {
+    {id:1,
       name: "কিভাবে ৪ রাকাত ফরজ নামাজের নিওম।",
       link: "https://www.youtube.com/watch?v=bHDOQDzzKV8",
     },
-    {
+    {id:2,
       name: " বিতর নামাজ কিভাবে পড়তে হয়?",
       link: "https://youtu.be/ShQEs3k5lps",
     },
   ];
   return (
     <div>
+      {/* ========duya========= */}
       {Namajduya.map((namaj) => (
         <NamajDuya key={namaj.id} namaj={namaj} />
       ))}
@@ -24,7 +25,9 @@ const Namaj = () => {
       {/* --------video section-------- */}
 
       {videos.map((video) => (
-        <div className="flex justify-between items-center bg-white shadow-[0_3px_10px_rgb(0,0,0,0.1)] py-4 rounded-lg px-2 md:text-2xl sm:text-[18px] my-3">
+        <div 
+        key={video.id}
+        className="flex justify-between items-center bg-white shadow-[0_3px_10px_rgb(0,0,0,0.1)] py-4 rounded-lg px-2 md:text-2xl sm:text-[18px] my-3">
           <h3>{video.name}</h3>
           {/*====== video play button start=======*/}
           <a href={video.link} target="_blank">
