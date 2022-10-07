@@ -1,13 +1,14 @@
-import React from 'react';
-
+import React from "react";
+import working from "../../Images/icons/working.svg";
 const JikirDay = () => {
-    return (
-        <div>
-            <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, aut? Voluptas unde qui laboriosam reiciendis quae recusandae. Libero fuga eius architecto? Assumenda quam, cupiditate delectus voluptates asperiores error alias. Sit veniam exercitationem ea, minima ipsa consectetur, repellat facere eaque dolores deleniti nam amet quia consequatur eveniet sequi eum, officiis quae?</h3>
-            <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, aut? Voluptas unde qui laboriosam reiciendis quae recusandae. Libero fuga eius architecto? Assumenda quam, cupiditate delectus voluptates asperiores error alias. Sit veniam exercitationem ea, minima ipsa consectetur, repellat facere eaque dolores deleniti nam amet quia consequatur eveniet sequi eum, officiis quae?</h3>
-            <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, aut? Voluptas unde qui laboriosam reiciendis quae recusandae. Libero fuga eius architecto? Assumenda quam, cupiditate delectus voluptates asperiores error alias. Sit veniam exercitationem ea, minima ipsa consectetur, repellat facere eaque dolores deleniti nam amet quia consequatur eveniet sequi eum, officiis quae?</h3>
-        </div>
-    );
+  return (
+    <div className="flex justify-center my-6 ">
+      <div className="bg-gray-200 p-[60px] rounded-[50%] flex items-center flex-col">
+        <img src={working} className="w-[300px]" alt="" />
+        <h3 className="my-6">এই পেইজটির কাজ চলছে....... </h3>
+      </div>
+    </div>
+  );
 };
 
 export default JikirDay;

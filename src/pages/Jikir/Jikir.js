@@ -1,6 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
-
+import { Link, NavLink, Outlet } from "react-router-dom";
+import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 const Jikir = () => {
   const activeLink = "bg-[#FF284F] z-[-1] text-white";
   const normalLink = "";
@@ -32,6 +33,23 @@ const Jikir = () => {
         </div>
       </div>
       <Outlet />
+      {/* ---------button-------- */}
+      <div className="flex justify-between ">
+        <Link to="/duya"
+        className="border px-5 py-1 hover:text-white hover:bg-black"
+        >
+          <h4>
+            <FontAwesomeIcon icon={faArrowLeft} /> <span className="mx-4">দোয়া</span>
+          </h4>
+        </Link>
+        <Link to="/hadis"
+        className="border px-5 py-1 hover:text-white hover:bg-black"
+        >
+          <h4>
+            <span className="mx-4">হাদিস</span> <FontAwesomeIcon icon={faArrowRight} />
+          </h4>
+        </Link>
+      </div>
     </div>
   );
 };

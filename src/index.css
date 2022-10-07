@@ -1,6 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Anek+Bangla&family=Rubik:ital@1&display=swap");
+body {
+  margin: 0;
+  font-family: "Anek Bangla";
+  font-size: 22px;
+  
+}
 
 ::selection {
   background: black;
@@ -21,21 +28,8 @@
   background: black;
 }
 
-.hello:hover{
-    background: #000;
+.hello:hover {
+  background: #000;
 }
-@layer base {
-  h1 {
-    @apply text-4xl font-bold;
-  }
 
-  li {
-    @apply p-4;
-  }
-}
-@import url("https://fonts.googleapis.com/css2?family=Anek+Bangla&family=Rubik:ital@1&display=swap");
-body {
-  margin: 0;
-  font-family: "Anek Bangla";
-  font-size: 22px;
-}
+

@@ -4,7 +4,7 @@ const DuyaName = ({duya}) => {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div>
-        <div className="bg-white shadow-[0_3px_10px_rgb(0,0,0,0.1)] px-2 rounded-lg">
+        <div className={isOpen? "bg-white mt-1 shadow-[0_3px_10px_rgb(0,0,0,0.3)] px-2 rounded-lg": "bg-white shadow-[0_3px_10px_rgb(0,0,0,0.1)] px-2 rounded-lg"}>
           <div
             className=" flex justify-between items-center py-5 pl-2 cursor-pointer my-3"
             onClick={() => setIsOpen(!isOpen)}

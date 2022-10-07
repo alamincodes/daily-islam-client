@@ -25,20 +25,20 @@ const Navbar = () => {
     <div className="w-full h-[90px] bg-white sticky shadow-md">
       <div className=" max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
         <NavLink to="/">
-          <div className="flex justify-center items-center">
-            <h1 className="text-black md:text-3xl sm:text-2xl"> DAILY ISLAM</h1>
+          <div className="flex justify-center items-center text-black bg-gray-200 px-2 rounded-[3px]">
+            <h1 className="md:text-3xl sm:text-2xl font-bold "> DAILY ISLAM</h1>
             <img src={Logo} className="w-12" alt="" />
           </div>
         </NavLink>
         <div className="hidden md:flex">
           <ul className="flex text-black items-center cursor-pointer">
-         <NavLink to="/"> <li className="hover:bg-black hover:text-white rounded-lg">হোম</li></NavLink>
+         <NavLink to="/"> <li className="hover:bg-black p-4 hover:text-white rounded-lg">হোম</li></NavLink>
           {/* navbar start namaj route */}
             {navbarNames.map((navName) => (
               <NavLink to={navName.link}
               className={({ isActive }) => (isActive ? activeLink : normalLink)}
               >
-                <li className="hover:bg-black hover:text-white rounded-lg">{navName.name}</li>
+                <li className="hover:bg-black p-4 hover:text-white rounded-lg">{navName.name}</li>
               </NavLink>
             ))}
 
@@ -66,39 +66,39 @@ const Navbar = () => {
         >
           <ul>
             <Link to="/">
-              <li className="hover:bg-white hover:text-black rounded-lg my-1">
+              <li className="hover:bg-white hover:text-black rounded-lg p-4 my-1">
                 হোম
               </li>
             </Link>
             <Link to="/namaj">
-              <li className="hover:bg-white hover:text-black rounded-lg">
+              <li className="hover:bg-white hover:text-black rounded-lg p-4">
                 নামাজ
               </li>
             </Link>
             <Link to="/duya">
-              <li className="hover:bg-white hover:text-black rounded-lg">
+              <li className="hover:bg-white hover:text-black rounded-lg p-4">
                 {" "}
                 দোয়া
               </li>
             </Link>{" "}
             <Link to="/jikir">
-              <li className="hover:bg-white hover:text-black rounded-lg">
+              <li className="hover:bg-white hover:text-black rounded-lg p-4">
                 যিক্‌র
               </li>
             </Link>
             <Link to="/hadis">
-              <li className="hover:bg-white hover:text-black rounded-lg">
+              <li className="hover:bg-white hover:text-black rounded-lg p-4">
                 হাদিস
               </li>
             </Link>
             <Link to="/sura">
-              <li className="hover:bg-white hover:text-black rounded-lg">
+              <li className="hover:bg-white hover:text-black rounded-lg p-4">
                 {" "}
                 সূরা
               </li>
             </Link>
             <Link to="/allah">
-              <li className="hover:bg-white hover:text-black mb-1 rounded-lg">
+              <li className="hover:bg-white hover:text-black mb-1 rounded-lg p-4">
                 {" "}
                 আল্লাহর নাম
               </li>

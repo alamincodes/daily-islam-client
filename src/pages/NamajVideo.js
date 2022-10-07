@@ -2,7 +2,8 @@ import React from "react";
 import Namajduya from "../NamajDuya.json";
 import NamajDuya from "./NamajDuya";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Namaj = () => {
   const videos = [
@@ -41,7 +42,26 @@ const Namaj = () => {
           </a>
           {/* ====video play button end====== */}
         </div>
+        
       ))}
+      {/* ---------button-------- */}
+      <div className="flex justify-between ">
+        <Link to="/"
+        className="border px-5 py-1 hover:text-white hover:bg-black"
+        >
+          <h4>
+            <FontAwesomeIcon icon={faArrowLeft} /> <span className="mx-4">হোম</span>
+          </h4>
+        </Link>
+        <Link to="/duya"
+        className="border px-5 py-1 hover:text-white hover:bg-black"
+        >
+          <h4>
+            <span className="mx-4">দোয়া</span> <FontAwesomeIcon icon={faArrowRight} />
+          </h4>
+        </Link>
+      </div>
+     
     </div>
   );
 };
