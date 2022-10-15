@@ -14,11 +14,11 @@ const Navbar = () => {
 
   const navbarNames = [
     // { name: "হোম", link: "/" },
-    { name: "নামাজ", link: "/namaj" },
-    { name: "দোয়া", link: "/duya" },
-    { name: "যিক্‌র", link: "/jikir" },
-    { name: "হাদিস", link: "/hadis" },
-    { name: "আল্লাহর নাম", link: "/allah" },
+    {id:1, name: "নামাজ", link: "/namaj" },
+    {id:2, name: "দোয়া", link: "/duya" },
+    {id:3, name: "যিক্‌র", link: "/jikir" },
+    {id:4, name: "হাদিস", link: "/hadis" },
+    {id:5, name: "আল্লাহর নাম", link: "/allah" },
   ];
 
   return (
@@ -35,7 +35,9 @@ const Navbar = () => {
          <NavLink to="/"> <li className="hover:bg-black p-4 hover:text-white rounded-lg">হোম</li></NavLink>
           {/* navbar start namaj route */}
             {navbarNames.map((navName) => (
-              <NavLink to={navName.link}
+              <NavLink 
+              key={navName.id}
+              to={navName.link}
               className={({ isActive }) => (isActive ? activeLink : normalLink)}
               >
                 <li className="hover:bg-black p-4 hover:text-white rounded-lg">{navName.name}</li>

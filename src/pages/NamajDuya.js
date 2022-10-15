@@ -10,7 +10,7 @@ const NamajDuya = ({ namaj }) => {
           onClick={() => setIsOpen(!isOpen)}
         >
           
-          <h2 className="text-black md:text-2xl sm:text-[18px]">
+          <h2 className={isOpen? "text-black md:text-2xl sm:text-[18px] font-bold":"text-black md:text-2xl sm:text-[18px]"}>
             {namaj.title}
           </h2>
           {/* un and down icons */}

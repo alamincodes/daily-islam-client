@@ -7,8 +7,8 @@ const Jikir = () => {
   const normalLink = "";
   const jikirDay = [
     // { time: "সকাল", link: "" },
-    { time: "সন্ধ্যা", link: "evening" },
-    { time: "রাত", link: "night" },
+    {id:1, time: "সন্ধ্যা", link: "evening" },
+    {id:2, time: "রাত", link: "night" },
   ];
   return (
     <div>
@@ -22,6 +22,7 @@ const Jikir = () => {
         </NavLink>
         {jikirDay.map((jikirTime) => (
           <NavLink
+          key={jikirTime.id}
             className={({ isActive }) => (isActive ? activeLink : normalLink)}
             to={jikirTime.link}
           >

@@ -1,12 +1,16 @@
 import React from "react";
-import working from "../../Images/icons/working.svg";
+import jikirDay from "../../dayJikir.json";
+import Sokal from "./Sokal";
 const JikirDay = () => {
+ 
   return (
-    <div className="flex justify-center my-6 ">
-      <div className="bg-gray-200 p-[60px] rounded-[50%] flex items-center flex-col">
-        <img src={working} className="w-[300px]" alt="" />
-        <h3 className="my-6">এই পেইজটির কাজ চলছে....... </h3>
-      </div>
+    <div>
+      <h2 className="text-center bg-[#FF284F] text-white py-1">
+        সকালবেলার যিক্‌র
+      </h2>
+     {jikirDay.map(day => (
+      <Sokal key={day.id} day={day}/>
+     ))}
     </div>
   );
 };

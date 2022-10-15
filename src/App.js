@@ -14,10 +14,12 @@ import PageNotFound from "./pages/PageNotFound";
 import JikirDay from "./pages/Jikir/JikirDay";
 import JikirEvening from "./pages/Jikir/JikirEvening";
 import JukirNight from "./pages/Jikir/JukirNight";
+import ScrollToTop from "./pages/ScrollToTop";
 function App() {
   return (
     <StrictMode>
       <BrowserRouter>
+      <ScrollToTop/>
         <Navbar />
         <div className="sm:px-5  max-w-screen-xl lg:px-8 mx-auto">
           <Routes>
@@ -28,9 +30,9 @@ function App() {
             <Route path="/hadis" element={<Hadis />} />
             {/* jikir nested route */}
             <Route path="/jikir" element={<Jikir />}>
-            <Route index element={<JikirDay />} />
-            <Route path="evening" element={<JikirEvening />} />
-            <Route path="night" element={<JukirNight />} />
+              <Route index element={<JikirDay />} />
+              <Route path="evening" element={<JikirEvening />} />
+              <Route path="night" element={<JukirNight />} />
             </Route>
             <Route path="/sura" element={<Sura />} />
             <Route path="*" element={<PageNotFound />} />
