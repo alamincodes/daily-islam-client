@@ -18,11 +18,12 @@ body {
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
+  border-radius: 50px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: black;
+  background: white;
 }
 
 /* Handle on hover */
