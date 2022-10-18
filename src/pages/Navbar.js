@@ -22,16 +22,18 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full h-[90px] bg-white sticky shadow-md">
+    <div className="w-full h-[90px]  bg-[#171d75] sticky shadow-md">
       <div className=" max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
+        {/* nav logo */}
         <NavLink to="/">
-          <div className="flex justify-center items-center text-black bg-gray-200 px-2 rounded-[3px]">
-            <h1 className="md:text-3xl sm:text-2xl font-bold "> DAILY ISLAM</h1>
-            <img src={Logo} className="w-12" alt="" />
+          <div className="flex justify-center items-center select-none text-black px-2 rounded-[3px]">
+            <h1 className="md:text-3xl sm:text-2xl font-bold text-white"> DAILY ISLAM</h1>
+            <img src={Logo} draggable="false" className="w-12" alt="" />
           </div>
         </NavLink>
+        {/* top nav */}
         <div className="hidden md:flex">
-          <ul className="flex text-black items-center cursor-pointer">
+          <ul className="flex text-white items-center cursor-pointer">
          <NavLink to="/"> <li className="hover:bg-black p-4 hover:text-white rounded-lg">হোম</li></NavLink>
           {/* navbar start namaj route */}
             {navbarNames.map((navName) => (
@@ -52,9 +54,9 @@ const Navbar = () => {
 
         <div onClick={handleNav} className="block md:hidden lg:hidden">
           {nav ? (
-            <AiOutlineClose size={30} className="text-black" />
+            <AiOutlineClose size={30} className="text-white" />
           ) : (
-            <AiOutlineMenu size={30} className="text-black" />
+            <AiOutlineMenu size={30} className="text-white" />
           )}
         </div>
 

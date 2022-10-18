@@ -30,7 +30,7 @@ const DuyaName = ({duya}) => {
               <h3 className=" leading-relaxed text-[19px] text-black font-semibold">
                 {duya.duyaArbi}
               </h3>
-              <h3 className=" leading-relaxed text-[17px] text-[#FF284F] font-bold">
+              <h3 className=" leading-relaxed text-[17px] text-[#009000] font-bold">
                 {duya.duyaBangla}
               </h3>
               <h3 className=" leading-relaxed text-[17px] text-black">

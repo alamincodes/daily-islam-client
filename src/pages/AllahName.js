@@ -5,7 +5,7 @@ const AllahName = ({ allahName }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <div className="bg-white shadow-[0_3px_10px_rgb(0,0,0,0.1)] p-2">
+      <div className="text-black bg-white shadow-[0_3px_10px_rgb(0,0,0,0.1)] p-2">
         <h2 className="text-center md:text-2xl sm:text-[24px]">{bangla}</h2>
         <h2 className="text-center md:text-2xl sm:text-[24px]">{arbi}</h2>
         <h2 className="text-center md:text-2xl sm:text-[24px]">{meaning}</h2> 

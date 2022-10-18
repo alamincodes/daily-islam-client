@@ -6,7 +6,9 @@ body {
   margin: 0;
   font-family: "Anek Bangla";
   font-size: 22px;
-  
+  background: #0A043C;
+  color: white;
+  /* background: linear-gradient(90deg, hsla(176, 61%, 87%, 1) 0%, hsla(150, 54%, 86%, 1) 50%, hsla(301, 68%, 84%, 1) 100%); */
 }
 
 ::selection {

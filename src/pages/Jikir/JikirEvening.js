@@ -1,12 +1,15 @@
 import React from 'react';
-import working from "../../Images/icons/working.svg";
+import eveningJikir from "../../eveningJikir.json"
+import Sondha from './Sondha';
 const JikirEvening = () => {
     return (
-        <div className="flex justify-center my-6 ">
-      <div className="bg-gray-200 p-[60px] rounded-[50%] flex items-center flex-col">
-        <img src={working} className="w-[300px]" alt="" />
-        <h3 className="my-6">এই পেইজটির কাজ চলছে....... </h3>
-      </div>
+      <div>
+      <h2 className="text-center bg-[#009000] text-white py-1">
+        সন্ধাবেলার যিক্‌র
+      </h2>
+     {eveningJikir.map(evening => (
+      <Sondha key={evening.id} evening={evening}/>
+     ))}
     </div>
     );
 };

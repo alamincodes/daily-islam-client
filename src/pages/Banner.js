@@ -4,9 +4,9 @@ import BannerBg from "../Images/banner.jpg";
 const Banner = () => {
   return (
     <div>
-      <div className=" flex flex-col-reverse lg:flex-row md:flex-row justify-between items-center my-5 ">
+      <div className="flex flex-col-reverse select-none lg:flex-row md:flex-row justify-between items-center my-5 ">
         {/* left  */}
-        <div className=" flex flex-col mx-10 ">
+        <div className="flex flex-col">
           <span className="my-4 font-bold text-center lg:text-4xl text-[25px]">
             আস-সালামু আলাইকুম
           </span>
@@ -20,7 +20,8 @@ const Banner = () => {
         <div>
           <img
             src={BannerBg}
-            className="lg:w-[500px] md:[500px] sm:w-[330px] aspect-video rounded-2xl "
+            className="lg:w-[500px] md:[500px] object-cover sm:w-[330px] aspect-video rounded-2xl border-4"
+            draggable="false"
             alt=""
           />
         </div>

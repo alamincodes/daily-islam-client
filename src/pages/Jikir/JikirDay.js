@@ -5,8 +5,8 @@ const JikirDay = () => {
  
   return (
     <div>
-      <h2 className="text-center bg-[#FF284F] text-white py-1">
-        সকালবেলার যিক্‌র
+      <h2 className="text-center bg-[#009000] text-white py-1">
+      সকালবেলার যিক্‌র
       </h2>
      {jikirDay.map(day => (
       <Sokal key={day.id} day={day}/>

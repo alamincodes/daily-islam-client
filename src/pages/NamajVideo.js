@@ -28,7 +28,7 @@ const Namaj = () => {
       {videos.map((video) => (
         <div 
         key={video.id}
-        className="flex justify-between items-center bg-white shadow-[0_3px_10px_rgb(0,0,0,0.1)] py-4 rounded-lg px-2 md:text-2xl sm:text-[18px] my-3">
+        className="flex justify-between text-black items-center bg-white shadow-[0_3px_10px_rgb(0,0,0,0.1)] py-4 rounded-lg px-2 md:text-2xl sm:text-[18px] my-3">
           <h3>{video.name}</h3>
           {/*====== video play button start=======*/}
           <a href={video.link} target="_blank">
@@ -47,14 +47,14 @@ const Namaj = () => {
       {/* ---------button-------- */}
       <div className="flex justify-between ">
         <Link to="/"
-        className="border px-5 py-1 hover:text-white hover:bg-black"
+        className="border md:px-5 sm:px-3 py-1 hover:text-white hover:bg-black"
         >
           <h4>
             <FontAwesomeIcon icon={faArrowLeft} /> <span className="mx-4">হোম</span>
           </h4>
         </Link>
         <Link to="/duya"
-        className="border px-5 py-1 hover:text-white hover:bg-black"
+        className="border px-5 md:px-5 sm:px-3 hover:text-white hover:bg-black"
         >
           <h4>
             <span className="mx-4">দোয়া</span> <FontAwesomeIcon icon={faArrowRight} />

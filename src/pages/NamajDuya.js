@@ -32,7 +32,7 @@ const NamajDuya = ({ namaj }) => {
             <h3 className=" leading-relaxed text-[19px] text-black font-semibold">
               {namaj.duyaArbi}
             </h3>
-            <h3 className=" leading-relaxed text-[17px] text-[#FF284F] font-bold">
+            <h3 className=" leading-relaxed text-[17px] text-[#009000] font-bold">
               {namaj.duyaBangla}
             </h3>
             <h3 className=" leading-relaxed text-[17px] text-black">

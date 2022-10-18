@@ -15,6 +15,7 @@ import JikirDay from "./pages/Jikir/JikirDay";
 import JikirEvening from "./pages/Jikir/JikirEvening";
 import JukirNight from "./pages/Jikir/JukirNight";
 import ScrollToTop from "./pages/ScrollToTop";
+import Quran from "./pages/Quran";
 function App() {
   return (
     <StrictMode>
@@ -28,6 +29,7 @@ function App() {
             <Route path="/namaj" element={<Namaj />} />
             <Route path="/duya" element={<Duya />} />
             <Route path="/hadis" element={<Hadis />} />
+            <Route path="/quran" element={<Quran/>} />
             {/* jikir nested route */}
             <Route path="/jikir" element={<Jikir />}>
               <Route index element={<JikirDay />} />
