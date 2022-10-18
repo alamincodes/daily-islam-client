@@ -2,7 +2,7 @@ import React from "react";
 import quranJpg from "../Images/quran.png";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight} from "@fortawesome/free-solid-svg-icons";
 
 const QuranScetion = () => {
   return (

@@ -19,7 +19,9 @@ const NamajTime = () => {
     var lat = position.coords.latitude;
     var long = position.coords.longitude;
 
-    fetch(`https://api.aladhan.com/v1/timings?latitude=${lat}&longitude=${long}&method=1&school=1`)
+    fetch(
+      `https://api.aladhan.com/v1/timings?latitude=${lat}&longitude=${long}&method=1&school=1`
+    )
       .then((res) => res.json())
       .then((json) => setFajrTime(json.data.timings.Fajr));
   }
@@ -42,7 +44,15 @@ const NamajTime = () => {
         break;
     }
   }
-  return <div>{fajrTime.length > 0 && <h1>{fajrTime} </h1>}</div>;
+  return (
+    <div>
+      {/* {fajrTime && <h1>{fajrTime}</h1>} */}
+      <h2 className="text-center">নামাজের সময়</h2>
+      <div className="flex items-center justify-evenly bg-gray-200 text-black rounded-md">
+        <h2>ফজর</h2> <h2>{fajrTime}</h2>
+      </div>
+    </div>
+  );
 };
 
 export default NamajTime;

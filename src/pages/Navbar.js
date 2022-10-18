@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   // active  navLink
-  const activeLink = "bg-black text-white rounded-lg  mx-2 ";
+  const activeLink = "underline decoration-4 decoration-pink-500 text-white mx-2 ";
   const normalLink = "";
 
   const navbarNames = [
@@ -22,7 +22,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full h-[90px]  bg-[#171d75] sticky shadow-md">
+    <div className="w-full h-[90px] bg-[#171d75] sticky shadow-md">
       <div className=" max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
         {/* nav logo */}
         <NavLink to="/">
@@ -34,7 +34,7 @@ const Navbar = () => {
         {/* top nav */}
         <div className="hidden md:flex">
           <ul className="flex text-white items-center cursor-pointer">
-         <NavLink to="/"> <li className="hover:bg-black p-4 hover:text-white rounded-lg">হোম</li></NavLink>
+         <NavLink to="/"> <li className="hover:underline hover:decoration-4 hover:decoration-pink-500 p-4 hover:text-white rounded-lg">হোম</li></NavLink>
           {/* navbar start namaj route */}
             {navbarNames.map((navName) => (
               <NavLink 
@@ -42,7 +42,7 @@ const Navbar = () => {
               to={navName.link}
               className={({ isActive }) => (isActive ? activeLink : normalLink)}
               >
-                <li className="hover:bg-black p-4 hover:text-white rounded-lg">{navName.name}</li>
+                <li className="hover:underline hover:decoration-4 hover:decoration-pink-500 px-4 hover:text-white">{navName.name}</li>
               </NavLink>
             ))}
 
