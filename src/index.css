@@ -6,9 +6,11 @@ body {
   margin: 0;
   font-family: "Anek Bangla";
   font-size: 22px;
-  background: #0A043C;
+  background: #0a043c;
   color: white;
-  /* background: linear-gradient(90deg, hsla(176, 61%, 87%, 1) 0%, hsla(150, 54%, 86%, 1) 50%, hsla(301, 68%, 84%, 1) 100%); */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 ::selection {
@@ -18,8 +20,6 @@ body {
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
-
-  
 }
 
 /* Handle */
@@ -36,5 +36,3 @@ body {
 .hello:hover {
   background: #000;
 }
-
-

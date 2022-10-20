@@ -4,7 +4,7 @@ import Logo from "../Images/icons/logo.svg";
 
 const footer = () => {
   return (
-    <footer class="bg-gray-100 mt-[150px] md:rounded-t-[70px] sm:rounded-t-[30px]" >
+    <footer class="bg-gray-100 mt-[150px] md:rounded-tr-[90px] sm:rounded-tr-[30px]" >
       <div class="max-w-5xl px-4 py-10 mx-auto sm:px-6 lg:px-8">
         <div class="flex justify-center ">
           <div className="flex items-center select-none rounded-[3px] px-2 text-black">

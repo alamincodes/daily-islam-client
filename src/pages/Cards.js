@@ -57,7 +57,7 @@ const Cards = () => {
           <div key={card.id}>
             <Link to={card.linkPage}>
             <div>
-              <div className="flex lg:flex-row md:flex-row sm:flex-col justify-center items-center shadow-[0_3px_10px_rgb(0,0,0,0.1)] py-5 px-2 transform hover:scale-95 duration-500 hover:bg-gray-100 bg-white rounded-md">
+              <div className="flex lg:flex-row md:flex-row sm:flex-col justify-center  items-center shadow-[0_3px_10px_rgb(0,0,0,0.1)] py-5 px-2  hover:scale-95 duration-500 hover:bg-gray-100 bg-white rounded-md">
                 {" "}
                 <h2 className="lg:text-3xl md:text-2xl sm:text-[15px]">
                   {card.name}

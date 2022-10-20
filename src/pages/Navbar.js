@@ -22,7 +22,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full h-[90px] bg-[#171d75] sticky shadow-md">
+    <div className="w-full h-[90px] bg-[#171d75] shadow-md fixed z-20">
       <div className=" max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
         {/* nav logo */}
         <NavLink to="/">

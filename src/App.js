@@ -23,7 +23,7 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Navbar />
-        <div className="sm:px-5  max-w-screen-xl lg:px-8 mx-auto">
+        <div className="sm:px-5 mt-24 max-w-screen-xl lg:px-8 mx-auto min-h-screen">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/allah" element={<Allah />} />
