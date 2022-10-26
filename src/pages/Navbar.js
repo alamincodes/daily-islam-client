@@ -38,8 +38,8 @@ const Navbar = () => {
     <div
       className={
         color
-          ? " w-full h-[90px] bg-white bg-opacity-20 backdrop-blur-lg drop-shadow-lg fixed z-20"
-          : "w-full h-[90px] fixed z-20 bg-white bg-opacity-20 backdrop-blur-lg drop-shadow-lg"
+          ? " w-full md:h-[70px] sm:h-[80px] bg-white bg-opacity-20 backdrop-blur-lg  drop-shadow-lg fixed z-20 rounded-b-lg"
+          : "w-full md:h-[90px] sm:h-[80px] fixed z-20"
       }
     >
       <div className=" max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
@@ -67,7 +67,7 @@ const Navbar = () => {
               <li
                 className={
                   color
-                    ? " hover:bg-rose-600 hover:rounded-lg text-black px-4 hover:text-white"
+                    ? " hover:bg-rose-600 hover:rounded-lg  text-black px-4 hover:text-white"
                     : "hover:bg-rose-600 hover:rounded-lg text-white  px-4 hover:text-white"
                 }
               >
@@ -86,7 +86,7 @@ const Navbar = () => {
                 <li
                   className={
                     color
-                      ? "hover:bg-rose-600 hover:rounded-lg text-black px-4 hover:text-white"
+                      ? "hover:bg-rose-600 hover:rounded-lg  text-black px-4 hover:text-white"
                       : "hover:bg-rose-600 hover:rounded-lg text-white  px-4 hover:text-white"
                   }
                 >
@@ -111,7 +111,7 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? " w-full bg-black text-white absolute top-[90px] left-0 flex justify-center text-center md:hidden"
+              ? " w-full bg-black text-white absolute top-[80px] left-0 flex justify-center text-center md:hidden"
               : "absolute left-[-100%]"
           }
         >

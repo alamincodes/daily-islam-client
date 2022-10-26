@@ -12,7 +12,7 @@ const Jikir = () => {
   ];
   return (
     <div>
-      <div className="flex border-b-4 border-[#009000] py-5 justify-center">
+      <div className="flex py-5 justify-center">
         <div className="flex  border border-white rounded-full overflow-hidden">
           <NavLink to="/jikir">
             <h3 className=" hover:bg-[#009000] hover:text-white px-3"> সকাল</h3>

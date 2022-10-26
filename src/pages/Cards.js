@@ -57,7 +57,7 @@ const Cards = () => {
           <div key={card.id}>
             <Link to={card.linkPage}>
               <div>
-                <div className="flex lg:flex-row md:flex-row sm:flex-col justify-center  items-center shadow-[0_3px_10px_rgb(0,0,0,0.1)] py-5 px-2  hover:scale-95 duration-500 hover:bg-gray-100 bg-white rounded-md">
+                <div className="flex lg:flex-row md:flex-row sm:flex-col-reverse justify-center  items-center shadow-[0_3px_10px_rgb(0,0,0,0.1)] py-5 px-2  hover:scale-95 duration-500 hover:bg-gray-100 bg-white rounded-md">
                   {" "}
                   <h2 className="lg:text-3xl md:text-2xl sm:text-[15px]">
                     {card.name}
@@ -65,7 +65,7 @@ const Cards = () => {
                   <img
                     src={card.img}
                     draggable="false"
-                    className="w-16 pt-2 mx-3"
+                    className="md:w-16 md:h-16 sm:h-14 sm:w-14 pt-2 mx-3"
                     alt=""
                   />
                 </div>

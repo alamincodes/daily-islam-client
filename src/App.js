@@ -17,13 +17,15 @@ import JukirNight from "./pages/Jikir/JukirNight";
 import ScrollToTop from "./pages/ScrollToTop";
 import Quran from "./pages/Quran";
 import NamajTime from "./pages/NamajTime";
+import GoToTop from "./pages/GoToTop";
 function App() {
   return (
     <StrictMode>
       <BrowserRouter>
+      
         <ScrollToTop />
         <Navbar />
-        <div className="sm:px-5 mt-24 max-w-screen-xl lg:px-8 mx-auto min-h-screen">
+        <div className="sm:px-5 md:mt-24 sm:mt-[87px] max-w-screen-xl lg:px-8 mx-auto min-h-screen">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/allah" element={<Allah />} />
@@ -42,6 +44,7 @@ function App() {
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </div>
+        <GoToTop/>
         <Footer />
       </BrowserRouter>
     </StrictMode>

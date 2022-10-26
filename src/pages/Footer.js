@@ -1,12 +1,8 @@
 import React from "react";
 import Logo from "../Images/icons/logo.svg";
-// import FooterImg from "../Images/icons/footer.svg";
-import ScrollToTop from "react-scroll-to-top";
 const footer = () => {
   return (
     <div>
-      <ScrollToTop smooth className="flex items-center justify-center" top="100"/>
-
       <footer class="bg-white bg-opacity-20 backdrop-blur-lg drop-shadow-lg md:rounded-t-[50px] sm:rounded-t-[20px] mt-[150px]">
         <div class="max-w-5xl px-4 py-10 mx-auto sm:px-6 lg:px-8">
           <div class="flex justify-center items-center flex-col">
