@@ -35,6 +35,7 @@ const NamajTime = () => {
       });
   }
 
+
   if(isLoading){
    return <Loading/>
   }

@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: "Anek Bangla";
   font-size: 22px;
-  background: #0a043c;
+  background: black;
   color: white;
   display: flex;
   flex-direction: column;
@@ -31,8 +31,4 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: black;
-}
-
-.hello:hover {
-  background: #000;
 }

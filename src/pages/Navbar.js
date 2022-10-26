@@ -1,52 +1,99 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
+
+
 import Logo from "../Images/icons/logo.svg";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  // navbar change color
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 90) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+  window.addEventListener("scroll", changeColor);
+
   const handleNav = () => {
     setNav(!nav);
   };
 
-  // active  navLink
-  const activeLink = "underline decoration-4 decoration-pink-500 text-white mx-2 ";
+  //  active  navLink
+  const activeLink = "bg-rose-600 rounded-lg ";
   const normalLink = "";
 
   const navbarNames = [
     // { name: "হোম", link: "/" },
-    {id:1, name: "নামাজ", link: "/namaj" },
-    {id:2, name: "দোয়া", link: "/duya" },
-    {id:3, name: "যিক্‌র", link: "/jikir" },
-    {id:4, name: "হাদিস", link: "/hadis" },
-    {id:5, name: "আল্লাহর নাম", link: "/allah" },
+    { id: 1, name: "নামাজ", link: "/namaj" },
+    { id: 2, name: "দোয়া", link: "/duya" },
+    { id: 3, name: "যিক্‌র", link: "/jikir" },
+    { id: 4, name: "হাদিস", link: "/hadis" },
+    { id: 5, name: "আল্লাহর নাম", link: "/allah" },
   ];
 
   return (
-    <div className="w-full h-[90px] bg-[#171d75] shadow-md fixed z-20">
+    <div
+      className={
+        color
+          ? " w-full h-[90px] bg-white bg-opacity-20 backdrop-blur-lg drop-shadow-lg fixed z-20"
+          : "w-full h-[90px] fixed z-20 bg-white bg-opacity-20 backdrop-blur-lg drop-shadow-lg"
+      }
+    >
       <div className=" max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
         {/* nav logo */}
         <NavLink to="/">
-          <div className="flex justify-center items-center select-none text-black px-2 rounded-[3px]">
-            <h1 className="md:text-3xl sm:text-2xl font-bold text-white"> DAILY ISLAM</h1>
+          <div className="flex justify-center items-center select-none text-black px-4 rounded-[3px]">
+            <h1
+              className={
+                color
+                  ? "md:text-3xl sm:text-2xl font-bold text-black"
+                  : "md:text-3xl sm:text-2xl font-bold text-white"
+              }
+            >
+              {" "}
+              DAILY ISLAM
+            </h1>
             <img src={Logo} draggable="false" className="w-12" alt="" />
           </div>
         </NavLink>
         {/* top nav */}
         <div className="hidden md:flex">
-          <ul className="flex text-white items-center cursor-pointer">
-         <NavLink to="/"> <li className="hover:underline hover:decoration-4 hover:decoration-pink-500 p-4 hover:text-white rounded-lg">হোম</li></NavLink>
-          {/* navbar start namaj route */}
-            {navbarNames.map((navName) => (
-              <NavLink 
-              key={navName.id}
-              to={navName.link}
-              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+          <ul className="flex text-white items-center cursor-pointer gap-2">
+            <NavLink to="/">
+              {" "}
+              <li
+                className={
+                  color
+                    ? " hover:bg-rose-600 hover:rounded-lg text-black px-4 hover:text-white"
+                    : "hover:bg-rose-600 hover:rounded-lg text-white  px-4 hover:text-white"
+                }
               >
-                <li className="hover:underline hover:decoration-4 hover:decoration-pink-500 px-4 hover:text-white">{navName.name}</li>
+                হোম
+              </li>
+            </NavLink>
+            {/* navbar start namaj route */}
+            {navbarNames.map((navName) => (
+              <NavLink
+                key={navName.id}
+                to={navName.link}
+                className={({ isActive }) =>
+                  isActive ? activeLink : normalLink
+                }
+              >
+                <li
+                  className={
+                    color
+                      ? "hover:bg-rose-600 hover:rounded-lg text-black px-4 hover:text-white"
+                      : "hover:bg-rose-600 hover:rounded-lg text-white  px-4 hover:text-white"
+                  }
+                >
+                  {navName.name}
+                </li>
               </NavLink>
             ))}
-
-            
           </ul>
         </div>
 

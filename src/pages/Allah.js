@@ -4,7 +4,7 @@ import AllahName from "./AllahName";
 const Allah = () => {
   return (
     <div>
-      {/* <h1>Hello</h1> */}
+     
       <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-2 mt-4">
         {AllahNames.map((allahName) => (
           <AllahName allahName={allahName} key={allahName.id} />
