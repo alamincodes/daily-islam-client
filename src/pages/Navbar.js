@@ -2,28 +2,31 @@ import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
 
-
 import Logo from "../Images/icons/logo.svg";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  // navbar change color
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
+  // navbar scroll and change color *start*
   const [color, setColor] = useState(false);
   const changeColor = () => {
-    if (window.scrollY >= 90) {
+    if (window.scrollY >= 40) {
       setColor(true);
     } else {
       setColor(false);
     }
   };
   window.addEventListener("scroll", changeColor);
+  // navbar scroll and change color *end*
 
-  const handleNav = () => {
-    setNav(!nav);
-  };
-
-  //  active  navLink
-  const activeLink = "bg-rose-600 rounded-lg ";
+  //  active navLink start
+  const activeLink = "bg-rose-600 rounded-sm text-white";
   const normalLink = "";
+  // active navLink end
+
+
 
   const navbarNames = [
     // { name: "হোম", link: "/" },
@@ -38,25 +41,26 @@ const Navbar = () => {
     <div
       className={
         color
-          ? " w-full md:h-[70px] sm:h-[80px] bg-white bg-opacity-20 backdrop-blur-lg  drop-shadow-lg fixed z-20 rounded-b-lg"
+          ? " w-full md:h-[70px] sm:h-[80px] bg-white bg-opacity-20 backdrop-blur-lg drop-shadow-lg fixed z-20"
           : "w-full md:h-[90px] sm:h-[80px] fixed z-20"
       }
     >
       <div className=" max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
         {/* nav logo */}
         <NavLink to="/">
-          <div className="flex justify-center items-center select-none text-black px-4 rounded-[3px]">
+          <div className="select-none text-black ">
             <h1
               className={
                 color
-                  ? "md:text-3xl sm:text-2xl font-bold text-black"
-                  : "md:text-3xl sm:text-2xl font-bold text-white"
+                  ? "md:text-3xl sm:text-2xl font-bold text-white flex items-center bg-black px-5 rounded-lg"
+                  : "md:text-3xl sm:text-2xl font-bold text-white flex items-center"
               }
             >
               {" "}
-              DAILY ISLAM
+              <span>DAILY</span>{" "}
+              <img src={Logo} draggable="false" className="w-12" alt="" />
+              <span>ISLAM</span>
             </h1>
-            <img src={Logo} draggable="false" className="w-12" alt="" />
           </div>
         </NavLink>
         {/* top nav */}
@@ -67,8 +71,8 @@ const Navbar = () => {
               <li
                 className={
                   color
-                    ? " hover:bg-rose-600 hover:rounded-lg  text-black px-4 hover:text-white"
-                    : "hover:bg-rose-600 hover:rounded-lg text-white  px-4 hover:text-white"
+                    ? " hover:bg-rose-600 rounded-sm  text-black px-4 hover:text-white"
+                    : "hover:bg-rose-600 rounded-sm  text-white  px-4 hover:text-white"
                 }
               >
                 হোম
@@ -86,8 +90,8 @@ const Navbar = () => {
                 <li
                   className={
                     color
-                      ? "hover:bg-rose-600 hover:rounded-lg  text-black px-4 hover:text-white"
-                      : "hover:bg-rose-600 hover:rounded-lg text-white  px-4 hover:text-white"
+                      ? "hover:bg-rose-600 rounded-sm  text-black px-4 hover:text-white"
+                      : "hover:bg-rose-600 rounded-sm text-white  px-4 hover:text-white"
                   }
                 >
                   {navName.name}

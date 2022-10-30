@@ -26,17 +26,17 @@ const DuyaName = ({duya}) => {
             )}
           </div>
           {isOpen && (
-            <div className="py-3 px-3 mt-4">
-              <h3 className=" leading-relaxed text-[19px] text-black font-semibold">
-                {duya.duyaArbi}
-              </h3>
-              <h3 className=" leading-relaxed text-[17px] text-[#009000] font-bold">
-                {duya.duyaBangla}
-              </h3>
-              <h3 className=" leading-relaxed text-[17px] text-black">
-                {duya.meaning}
-              </h3>
-            </div>
+           <div className="py-3 px-3 mt-4 text-gray-600"> 
+           <h3 className=" leading-relaxed text-[19px] font-semibold">
+             {duya.duyaArbi}
+           </h3>
+           <h3 className=" leading-relaxed text-[17px] text-[#009000] font-bold">
+            <span className="text-gray-600">উচ্চারনঃ</span> {duya.duyaBangla}
+           </h3>
+           <h3 className="text-[17px]">
+           <span className="font-bold">অর্থঃ</span> <span className="">{duya.meaning}</span>
+           </h3>
+         </div>
           )}
         </div>
       </div>

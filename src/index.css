@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Anek+Bangla&family=Rubik:ital@1&display=swap");
 body {
+
   margin: 0;
   font-family: "Anek Bangla";
   font-size: 22px;
@@ -14,7 +15,7 @@ body {
 }
 
 ::selection {
-  background: black;
+  background: rgb(117, 117, 117);
   color: whitesmoke;
 }
 /* width */
@@ -24,26 +25,49 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: black;
+  background: #3d3b3b;
   border-radius: 50px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: black;
+  background: #7a7a7a;
 }
 
-.goto-btn{
-  background-color: white;
-  right: 20px;
-  bottom: 40px;
-  position: fixed;
-  z-index: 2;
-  cursor: pointer;
-  border-radius: 50px;
-  width: 40px;
-  height: 40px;
-  box-shadow: 0 9px 25px 0 rgba(132, 128, 177, 0.28);
-  border: none;
-  color: black;
+
+
+
+/* loading spinner */
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  border-radius: 50%;
+  -webkit-mask: radial-gradient(farthest-side,#0000 40%,#474bff 41%);
+  background: linear-gradient(0deg ,rgba(71,75,255,0.5) 50%,rgba(71,75,255,1) 0) center/4.5px 100%,
+       linear-gradient(90deg,rgba(71,75,255,0.25) 50%,rgba(71,75,255,0.75) 0) center/100% 4.5px;
+  background-repeat: no-repeat;
+  animation: spinner-d3o0rx 1s infinite steps(12);
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.915;
+  transform: rotate(30deg);
+}
+
+.spinner::after {
+  opacity: 0.83;
+  transform: rotate(60deg);
+}
+
+@keyframes spinner-d3o0rx {
+  100% {
+     transform: rotate(1turn);
+  }
 }

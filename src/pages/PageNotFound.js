@@ -1,16 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import NotFound from "../Images/icons/not-found.svg";
+import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faHome} from "@fortawesome/free-solid-svg-icons";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 const PageNotFound = () => {
-    return (
-        <div className='flex flex-col justify-center items-center'>
-            <img src={NotFound}  alt="" />
-            <h3 className='md:text-3xl sm:text-2xl my-4'>Page not found </h3>
-            <Link to="/"> <button className='border px-8 py-1 text-white bg-black hover:bg-white hover:text-black duration-300'>Home <FontAwesomeIcon icon={faHome} size="sm" className='mx-2' /></button> </Link>
-        </div>
-    );
+  return (
+    <div class="grid h-screen place-content-center bg-black">
+      <div class="text-center">
+        <strong class="text-9xl font-black text-gray-200">404</strong>
+
+        <p class="mt-4 text-white/50 text-[18px] ">
+          দুঃখিত আপনি যেই পেইজটি খুজছেন তা পাও্যা জাচ্ছে না।
+        </p>
+
+        <Link
+          to="/"
+          class="mt-6 inline-block rounded-full hover:text-black hover:bg-white transition duration-300 px-5 py-3 text-sm font-medium text-white border"
+        >
+          Go Back Home <FontAwesomeIcon icon={faHome} className="ml-1" />
+        </Link>
+      </div>
+    </div>
+  );
 };
 
 export default PageNotFound;

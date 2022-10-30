@@ -28,15 +28,15 @@ const NamajDuya = ({ namaj }) => {
         </div>
         
         {isOpen && (
-          <div className="py-3 px-3 mt-4"> 
-            <h3 className=" leading-relaxed text-[19px] text-black font-semibold">
+          <div className="py-3 px-3 mt-4 text-gray-600"> 
+            <h3 className=" leading-relaxed text-[19px] font-semibold">
               {namaj.duyaArbi}
             </h3>
             <h3 className=" leading-relaxed text-[17px] text-[#009000] font-bold">
-              {namaj.duyaBangla}
+             <span className="text-gray-600">উচ্চারনঃ</span> {namaj.duyaBangla}
             </h3>
-            <h3 className=" leading-relaxed text-[17px] text-black">
-              {namaj.meaning}
+            <h3 className="text-[17px]">
+            <span className="font-bold">অর্থঃ</span> <span className="">{namaj.meaning}</span>
             </h3>
           </div>
         )}

@@ -9,7 +9,7 @@ const Sondha = ({evening}) => {
   };
     return (
         <div>
-      <div className="rounded-md break-all my-4 p-4 text-gray-600 md:text-[18px] sm:text-[15px] shadow-[0_3px_10px_rgb(0,0,0,0.3)] bg-white">
+      <div className="rounded-md my-4 p-4 text-gray-600 md:text-[18px] sm:text-[15px] shadow-[0_3px_10px_rgb(0,0,0,0.3)] bg-white">
         {title && <h2 className="font-bold text-center text-black">{title}</h2>}
         <div className="bg-gray-100 p-2 rounded-lg">
           {/* ========arbi====== */}

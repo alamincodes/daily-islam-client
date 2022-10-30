@@ -3,7 +3,6 @@ import Banner from "./Banner";
 import Cards from "./Cards";
 import Info from "./Info";
 import MainBanner from "./MainBanner";
-import Navbar from "./Navbar";
 import QuranScetion from "./QuranScetion";
 
 const home = () => {

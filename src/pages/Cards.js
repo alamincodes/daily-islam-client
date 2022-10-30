@@ -46,7 +46,7 @@ const Cards = () => {
         </h2>
 
         <Link to="/prayer-time">
-          <button className=" md:mx-3 sm:mx-3 md:text-[20px] sm:text-[15px] select-none bg-black text-white rounded-full py-3 md:px-6 sm:px-10  hover:scale-105 duration-500">
+          <button className=" md:mx-3 sm:mx-3 md:text-[20px] sm:text-[15px] select-none bg-black text-white rounded-full py-3 md:px-6 sm:px-10  hover:scale-105 duration-500 ease-in-out">
             নামাজ এর সময়
           </button>
         </Link>

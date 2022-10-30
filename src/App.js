@@ -7,7 +7,6 @@ import Footer from "./pages/Footer";
 import Allah from "./pages/Allah";
 import Namaj from "./pages/NamajVideo";
 import Duya from "./pages/Duya";
-import Hadis from "./pages/Hadis";
 import Jikir from "./pages/Jikir/Jikir";
 import Sura from "./pages/Sura";
 import PageNotFound from "./pages/PageNotFound";
@@ -18,6 +17,7 @@ import ScrollToTop from "./pages/ScrollToTop";
 import Quran from "./pages/Quran";
 import NamajTime from "./pages/NamajTime";
 import GoToTop from "./pages/GoToTop";
+import Hadis from "./pages/Hadith/Hadis";
 function App() {
   return (
     <StrictMode>
