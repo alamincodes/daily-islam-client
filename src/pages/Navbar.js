@@ -22,7 +22,7 @@ const Navbar = () => {
   // navbar scroll and change color *end*
 
   //  active navLink start
-  const activeLink = "bg-rose-600 rounded-sm text-white";
+  const activeLink = "bg-rose-600 rounded-sm";
   const normalLink = "";
   // active navLink end
 

@@ -12,7 +12,7 @@ const Hadis = () => {
     fetch(`https://alquranbd.com/api/hadith/bukhari/${chapterNo}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setHdith(data);
         setIsLoading(false);
       });
@@ -27,14 +27,18 @@ const Hadis = () => {
   }
   return (
     <div className="">
-      <h2 className="text-rose-600 text-[18px] text-right"><span className="bg-rose-200 px-5 rounded-full">Page no: {chapterNo}</span></h2>
-      <div className=" text-center ">
+      <h2 className="text-rose-600 text-[18px] text-right"><span className="bg-rose-200 px-5 rounded-full">Page No: {chapterNo}</span></h2>
+      <div className="text-center mt-2">
       {chapterNo > 1 && (
-        <button onClick={() => setChapterNo(chapterNo - 1)} className="border px-5 ">
-          Pev
+        <button 
+        onClick={() => setChapterNo(chapterNo - 1)} 
+        className="px-5 text-[18px] rounded-l-full hover:scale-95 duration-300 bg-rose-600">
+          Prev
         </button>
       )}
-      <button onClick={() => setChapterNo(chapterNo + 1)} className="border px-5 mx-2">
+      <button 
+      onClick={() => setChapterNo(chapterNo + 1)} 
+      className="px-5 text-[18px] mx-2 rounded-r-full hover:scale-95 duration-300 bg-rose-600">
         Next
       </button>
       

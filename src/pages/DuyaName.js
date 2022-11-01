@@ -31,10 +31,10 @@ const DuyaName = ({duya}) => {
              {duya.duyaArbi}
            </h3>
            <h3 className=" leading-relaxed text-[17px] text-[#009000] font-bold">
-            <span className="text-gray-600">উচ্চারনঃ</span> {duya.duyaBangla}
+            <span className="text-black">উচ্চারনঃ</span> {duya.duyaBangla}
            </h3>
            <h3 className="text-[17px]">
-           <span className="font-bold">অর্থঃ</span> <span className="">{duya.meaning}</span>
+           <span className="font-bold text-black">অর্থঃ</span> <span className="">{duya.meaning}</span>
            </h3>
          </div>
           )}
