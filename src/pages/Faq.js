@@ -1,37 +1,54 @@
 import React from "react";
-
+import faq from "../Images/faq.svg";
+import queAns from "../Faq.json";
 const Faq = () => {
   return (
-    <div className="my-10 ">
-      <details class="group rounded shadow-1   bg-white dark:bg-slate-800/[0.6] p-6">
-        <summary class="flex cursor-pointer items-center justify-between">
-          <h2 class="text-lg font-medium text-white/50">
-            Lorem ipsum dolor sit amet consectetur adipisicing?
-          </h2>
+    <div className="my-24">
+      <div className="flex md:flex-row sm:flex-col">
+        {/* left side */}
+        <div className="md:w-[50%] sm:w-auto">
+          <div className="flex sm:justify-center md:justify-start md:items-start flex-col sm:items-center">
+            <img src={faq} className="w-[50%]" alt="" />
+            <div className="text-4xl font-bold flex sm:flex-col md:flex-row">
+              <h2 className="">সাধারন কিছু</h2>
+              <h2 className="text-[#38BDF8] lgw-2/3 mx-1">প্রশ্নের উওর</h2>
+            </div>
+          </div>{" "}
+        </div>
+        {/* right side */}
+        <div className="md:w-[50%] sm:w-auto sm:my-3 md:my-auto rounded-md">
+          {queAns.map((qus) => (
+            <div key={qus.id}>
+              <details className="group shadow-1 p-2 sm:px-2 md:px-3 bg-slate-800/[0.6] my-1">
+                <summary className="flex cursor-pointer items-center justify-between">
+                  <h2 className="text-[16px] font-medium text-white/50">
+                    {qus.question}
+                  </h2>
 
-          <span class="ml-1.5 flex-shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 flex-shrink-0 transition duration-300 group-open:-rotate-45"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </span>
-        </summary>
+                  <span className="ml-1.5 flex-shrink-0 rounded-full bg-[#13283F] p-1.5 text-[#38BDF8] sm:p-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 flex-shrink-0 transition duration-300 group-open:-rotate-45"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </summary>
 
-        <p class="mt-4 leading-relaxed text-gray-700">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
-          veritatis molestias culpa in, recusandae laboriosam neque aliquid
-          libero nesciunt voluptate dicta quo officiis explicabo consequuntur
-          distinctio corporis earum similique!
-        </p>
-      </details>
+                <p className="mt-4 select-none leading-relaxed text-[16px] text-white/95">
+                  {qus.answer}
+                </p>
+              </details>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-const Sokal = ({ day }) => {
-  const {text,title, jikirBangla, jikirArbi, meaning, read, detail} = day;
+const Sokal = ({ day, index }) => {
+  const { text, title, jikirBangla, jikirArbi, meaning, read, detail } = day;
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => {
@@ -10,25 +10,35 @@ const Sokal = ({ day }) => {
 
   return (
     <div>
-      <div className="rounded-md my-4 p-4 text-gray-600 md:text-[18px] sm:text-[15px] shadow-[0_3px_10px_rgb(0,0,0,0.3)] bg-white">
-        {title && <h2 className="font-bold text-center text-black">{title}</h2>}
-        <div className="bg-gray-100 p-2 rounded-lg">
+      <div className="bg-[#0B1120] rounded-md my-4 p-4 text-white/90 md:text-[18px] sm:text-[15px] shadow-[0_3px_10px_rgb(0,0,0,0.3)]">
+        <h2 className="mb-2">
+          <span className="bg-[#13283F] text-[#38BDF8] px-4 rounded-full">
+            {index + 1}
+          </span>
+        </h2>
+        {title && (
+          <h2 className="font-bold text-[20px] text-center text-[#38BDF8]">
+            {title}
+          </h2>
+        )}
+        <div className="bg-[#13283F] p-2 rounded-lg">
           {/* ========arbi====== */}
           {jikirArbi && <h2 className="my-2 font-semibold">{jikirArbi}</h2>}
           {/* ========text======= */}
-          {text && <h2>{text}</h2> }
+          {text && <h2>{text}</h2>}
           {/* =======bangla========= */}
-         {jikirBangla &&  <h2>
-            <span className="font-bold">উচ্চারনঃ </span>
-            <span className=" font-semibold">
-              {jikirBangla}
-            </span>
-           
-          </h2>}
-           {/* ======meaning==== */}
-          {meaning && <h2 className="my-2 text-[15px]">
-            <span className="font-bold">অর্থঃ</span> {meaning}
-          </h2>}
+          {jikirBangla && (
+            <h2>
+              <span className="font-bold text-[#38BDF8]">উচ্চারনঃ </span>
+              <span className=" font-semibold">{jikirBangla}</span>
+            </h2>
+          )}
+          {/* ======meaning==== */}
+          {meaning && (
+            <h2 className="my-2 text-[15px]">
+              <span className="font-bold text-[#38BDF8]">অর্থঃ</span> {meaning}
+            </h2>
+          )}
         </div>
         {/*===== read==== */}
         {read && (
@@ -52,7 +62,7 @@ const Sokal = ({ day }) => {
         </div>
 
         {modal && (
-          <div className="bg-gray-100 p-2 rounded-lg">
+          <div className="bg-[#13283F] p-2 rounded-lg">
             <p>{detail}</p>
           </div>
         )}

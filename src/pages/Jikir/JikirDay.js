@@ -8,8 +8,8 @@ const JikirDay = () => {
       <h2 className="text-center bg-[#009000] mt-1 rounded-full text-white py-1">
       সকালবেলার যিক্‌র
       </h2>
-     {jikirDay.map(day => (
-      <Sokal key={day.id} day={day}/>
+     {jikirDay.map((day, index) => (
+      <Sokal key={day.id} day={day} index={index}/>
      ))}
     </div>
   );

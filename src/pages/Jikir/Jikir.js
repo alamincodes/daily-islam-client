@@ -13,7 +13,7 @@ const Jikir = () => {
   return (
     <div>
       <div className="flex py-5 justify-center">
-        <div className="flex  border border-white rounded-full overflow-hidden">
+        <div className="flex border border-white rounded-full overflow-hidden">
           <NavLink to="/jikir">
             <h3 className=" hover:bg-[#009000] hover:text-white px-3"> সকাল</h3>
           </NavLink>
@@ -35,7 +35,7 @@ const Jikir = () => {
       <div className="flex justify-between ">
         <Link
           to="/duya"
-          className="border md:px-5 sm:px-3 py-1 hover:text-white hover:bg-black"
+          className="border-2 border-[#38BDF8] text-[#38BDF8] rounded-full md:px-5 sm:px-3 py-1"
         >
           <h4>
             <FontAwesomeIcon icon={faArrowLeft} />{" "}
@@ -44,7 +44,7 @@ const Jikir = () => {
         </Link>
         <Link
           to="/hadis"
-          className="border md:px-5 sm:px-3 py-1 hover:text-white hover:bg-black"
+          className="border-2 border-[#38BDF8] text-[#38BDF8] rounded-full md:px-5 sm:px-3 py-1"
         >
           <h4>
             <span className="mx-4">হাদিস</span>{" "}

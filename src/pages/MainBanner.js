@@ -3,7 +3,7 @@ import bgImg from "../Images/banner.jpg";
 const MainBanner = () => {
   return (
     <div
-      className=" rounded-lg my-2 p-[30px]"
+      className=" rounded-lg p-[30px] img-banner "
       style={{
         backgroundImage: `url(${bgImg})`,
         backgroundPosition: "center",
@@ -13,7 +13,7 @@ const MainBanner = () => {
         position: "relative",
       }}
     >
-      <div className="md:h-[400px] flex items-end justify-center">
+      <div className="md:h-[500px]  flex items-end justify-center">
         <h2 className=" font-bold text-center select-none text-[20px]  text-white p-1">
           "হে ঈমানদারগন! তোমরা আল্লাহকে অধিক পরিমানে স্মরন করো। আর সকাল-সন্ধায়
           তার পবিত্রতা ঘোষনা করো।"

@@ -9,24 +9,10 @@ const Navbar = () => {
     setNav(!nav);
   };
 
-  // navbar scroll and change color *start*
-  const [color, setColor] = useState(false);
-  const changeColor = () => {
-    if (window.scrollY >= 40) {
-      setColor(true);
-    } else {
-      setColor(false);
-    }
-  };
-  window.addEventListener("scroll", changeColor);
-  // navbar scroll and change color *end*
-
   //  active navLink start
-  const activeLink = "bg-rose-600 rounded-sm";
+  const activeLink = "bg-[#38BDF8] rounded-sm text-white";
   const normalLink = "";
   // active navLink end
-
-
 
   const navbarNames = [
     // { name: "হোম", link: "/" },
@@ -38,24 +24,12 @@ const Navbar = () => {
   ];
 
   return (
-    <div
-      className={
-        color
-          ? " w-full md:h-[70px] sm:h-[80px] bg-white bg-opacity-20 backdrop-blur-lg drop-shadow-lg fixed z-20"
-          : "w-full md:h-[90px] sm:h-[80px] fixed z-20"
-      }
-    >
+    <div className="w-full bg-[#0B1221] md:h-[70px] sm:h-[80px] fixed z-20">
       <div className=" max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
         {/* nav logo */}
         <NavLink to="/">
           <div className="select-none text-black ">
-            <h1
-              className={
-                color
-                  ? "md:text-3xl sm:text-2xl font-bold text-white flex items-center bg-black px-5 rounded-lg"
-                  : "md:text-3xl sm:text-2xl font-bold text-white flex items-center"
-              }
-            >
+            <h1 className="md:text-3xl sm:text-2xl font-bold text-white flex items-center">
               {" "}
               <span>DAILY</span>{" "}
               <img src={Logo} draggable="false" className="w-12" alt="" />
@@ -68,13 +42,7 @@ const Navbar = () => {
           <ul className="flex text-white items-center cursor-pointer gap-2">
             <NavLink to="/">
               {" "}
-              <li
-                className={
-                  color
-                    ? " hover:bg-rose-600 rounded-sm  text-black px-4 hover:text-white"
-                    : "hover:bg-rose-600 rounded-sm  text-white  px-4 hover:text-white"
-                }
-              >
+              <li className="hover:bg-[#38BDF8] rounded-sm  text-white  px-4 hover:text-white">
                 হোম
               </li>
             </NavLink>
@@ -87,13 +55,7 @@ const Navbar = () => {
                   isActive ? activeLink : normalLink
                 }
               >
-                <li
-                  className={
-                    color
-                      ? "hover:bg-rose-600 rounded-sm  text-black px-4 hover:text-white"
-                      : "hover:bg-rose-600 rounded-sm text-white  px-4 hover:text-white"
-                  }
-                >
+                <li className="hover:bg-[#38BDF8] rounded-sm text-white  px-4 hover:text-white">
                   {navName.name}
                 </li>
               </NavLink>

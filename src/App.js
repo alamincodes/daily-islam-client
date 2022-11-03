@@ -26,7 +26,7 @@ function App() {
       
         <ScrollToTop />
         <Navbar />
-        <div className="sm:px-5 md:mt-24 sm:mt-[87px] max-w-screen-xl lg:px-8 mx-auto min-h-screen">
+        <div className="sm:px-5 md:mt-20 sm:mt-[80px] max-w-screen-xl lg:px-8 mx-auto min-h-screen">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/allah" element={<Allah />} />

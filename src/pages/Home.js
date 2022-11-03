@@ -10,7 +10,7 @@ import QuranScetion from "./QuranScetion";
 const home = () => {
   return (
     <div>
-        <div className=""><Banner/></div>
+        <div><Banner/></div>
         {/* <div className="md:block sm:hidden "><MainBanner/></div> */}
         <Info/>
         <Cards/>

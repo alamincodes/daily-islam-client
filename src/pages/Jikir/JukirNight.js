@@ -1,12 +1,15 @@
 import React from "react";
-import working from "../../Images/icons/working.svg";
+import NightJikir from "../../jikirNight.json";
+import Rat from "./Rat";
 const JukirNight = () => {
   return (
-    <div className="flex justify-center items-center h-screen flex-col my-6 ">
-      <div className=" flex flex-col items-center">
-        {/* <img src={working} className="w-[300px] animate-pulse" alt="working img"/> */}
-        <h3 className="my-6 animate-bounce">page coming soon...</h3>
-      </div>
+    <div className="">
+      <h2 className="text-center bg-[#009000] mt-1 rounded-full text-white py-1">
+      রাতের যিক্‌র
+      </h2>
+     {NightJikir.map((night, index) => (
+      <Rat key={night.id} night={night} index={index}/>
+     ))}
     </div>
   );
 };

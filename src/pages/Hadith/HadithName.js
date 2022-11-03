@@ -38,13 +38,13 @@ const HadithName = ({ hadith }) => {
   };
   return (
     <div>
-      <div className="bg-white text-gray-700 rounded-lg p-2 my-2 px-3">
+      <div className="bg-[#0B1120] text-white/90 rounded-lg p-2 my-2 px-3">
         <h2 className="text-center sm:text-[16px] md:text-[22px] my-5 p-2 text-[#009000] font-semibold bg-green-100 rounded-lg">
           {hadithTopicName}
         </h2>
         <h2 className="sm:text-[15px] md:text-[19px]">{hadithBangla}</h2>
         <p className="text-right sm:text-[12px] md:text-[15px] mt-2">
-          <span className="bg-rose-200 px-5 rounded-full text-rose-600">সহীহ বুখারী, হাদিস নংঃ {hadithNo.getDigitBanglaFromEnglish()}</span>
+          <span className="bg-blue-100 px-5 rounded-full text-[#000]">সহীহ বুখারী, হাদিস নংঃ {hadithNo.getDigitBanglaFromEnglish()}</span>
         </p>
       </div>
     </div>

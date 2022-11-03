@@ -8,7 +8,9 @@ const HadithDownload = ({ hadithPdf, hadithName, partName }) => {
   const [toastAdd, setToastAdd] = useState(false);
   const openToast = () => {
     setToastAdd(true);
-    toast.success("Thanks for downloading the hadith🖤");
+    toast.success(`ধন্যবাদ ${hadithName} এর ${partName} টি ডাউনলোড করার জন্য🤍`,  {
+      style: ({ fontFamily: "Anek Bangla", fontSize:"18px", background:"#0b1c45" })
+    });
   };
 
   return (
@@ -26,7 +28,7 @@ const HadithDownload = ({ hadithPdf, hadithName, partName }) => {
         </a>
       </div>
       {toastAdd && (
-        <ToastContainer autoClose={5000} hideProgressBar={true} theme="colored" />
+        <ToastContainer   style={{ fontFamily: "Anek Bangla" }} autoClose={2000} hideProgressBar={true} theme="colored" />
       )}
     </div>
   );

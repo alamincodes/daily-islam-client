@@ -6,7 +6,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const QuranScetion = () => {
   return (
-    <div className="bg-gradient-to-t from-[#f8acff] to-[#696eff] select-none rounded-lg md:my-10 sm:my-24">
+    <div className="bg-slate-800/[0.6] select-none rounded-lg md:my-10 sm:my-24">
       <div className="flex mx-1 justify-between items-center flex-col-revers md:flex-row sm:flex-col">
         <div className="sm:mt-[-90px] md:mt-auto rounded-full">
           <img
@@ -19,7 +19,7 @@ const QuranScetion = () => {
         <div className="md:mr-20 lg:mr-[10rem] flex items-center flex-col justify-center">
           <h2 className="md:text-4xl">কোরআন শরীফ পড়ুন</h2>
           <Link to="/quran">
-            <button className="flex items-center  px-8 py-2 hover:scale-95 duration-300 text-[15px] bg-black text-white rounded-full my-3">
+            <button className="flex items-center  px-8 py-2 hover:scale-95 duration-300 text-[15px] border-2 border-[#38BDF8] text-[#38BDF8] rounded-full my-3">
               কোরআন পড়ুন{" "}
               <FontAwesomeIcon
                 icon={faArrowRight}

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Namaj from "../Images/icons/namaj.svg";
-import Tasbih from "../Images/icons/tasbih.svg";
-import Hadis from "../Images/icons/hadis.svg";
+import Tasbih from "../Images/icons/tasbih.png";
+import Hadis from "../Images/icons/hadith.png";
 import Duya from "../Images/icons/duya.svg";
-import Allah from "../Images/icons/allah.svg";
+import Allah from "../Images/icons/allah.png";
 import Sura from "../Images/icons/sura.svg";
 import { Link } from "react-router-dom";
 
@@ -35,8 +35,8 @@ const Cards = () => {
   };
   setInterval(updateTime, 1000);
   return (
-    <div>
-      <h3 className="text-center text-3xl mt-10">ফিচার</h3>
+    <div className="">
+      {/* <h3 className="text-center text-3xl mt-10">ফিচার</h3> */}
       {/* ----------time------------- */}
       <div className="flex justify-between items-center bg-gradient-to-r from-[#f3a0d7] via-[#f4e6f1] to-[#b3e8f7] select-none md:flex-row sm:flex-col text-black bg-white shadow-[0_3px_10px_rgb(0,0,0,0.1)] md:py-3 rounded-md py-1">
         <h4 className="md:text-3xl sm:text-[20px] font-bold mx-5">সময়</h4>
@@ -57,15 +57,15 @@ const Cards = () => {
           <div key={card.id}>
             <Link to={card.linkPage}>
               <div>
-                <div className="flex lg:flex-row md:flex-row sm:flex-col-reverse justify-center  items-center shadow-[0_3px_10px_rgb(0,0,0,0.1)] py-5 px-2  hover:scale-95 duration-500 hover:bg-gray-100 bg-white rounded-md">
+                <div className="flex lg:flex-row md:flex-row sm:flex-col-reverse justify-center items-center shadow-[0_3px_10px_rgb(0,0,0,0.1)] py-5 px-2  hover:scale-95 duration-500 border-2 border-[#38BDF8] bg-[#13283F] rounded-md">
                   {" "}
-                  <h2 className="lg:text-3xl md:text-2xl sm:text-[15px]">
+                  <h2 className="md:text-[20px] sm:text-[15px] text-white">
                     {card.name}
                   </h2>
                   <img
                     src={card.img}
                     draggable="false"
-                    className="md:w-16 md:h-16 sm:h-14 sm:w-14 pt-2 mx-3"
+                    className="md:w-14 md:h-14 sm:h-14 sm:w-14 pt-2 md:mb-2 lg:mt-2"
                     alt=""
                   />
                 </div>

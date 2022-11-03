@@ -9,7 +9,7 @@ const AllahName = ({ allahName }) => {
   };
   return (
     <div>
-      <div className="text-gray-700 rounded-md border-t-4 border-rose-600 bg-white shadow-[0_3px_10px_rgb(0,0,0,0.1)] p-2">
+      <div className="text-gray-200 rounded-md  bg-[#0B1120] shadow-[0_3px_10px_rgb(0,0,0,0.1)] p-2">
         <h2 className="text-center text-[#009000] font-semibold md:text-[22px] sm:text-[24px]">
           {bangla}
         </h2>
@@ -24,7 +24,7 @@ const AllahName = ({ allahName }) => {
             </button>
           ) : (
             <button
-              className="text-white text-[17px] bg-rose-500 rounded-full px-10 hover:scale-105 duration-300 "
+              className="text-white text-[17px] bg-[#38BDf8] rounded-full px-10 hover:scale-105 duration-300 "
 
               onClick={toggleModal}
             >

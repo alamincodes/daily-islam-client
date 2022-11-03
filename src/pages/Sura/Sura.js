@@ -1,9 +1,11 @@
 import React from "react";
+import SuraFile from "../../Sura.json";
+import SuraDetail from "./SuraDetail";
 const Sura = () => {
   return (
-    <div className="flex justify-center items-center h-screen flex-col my-6 ">
-      <div className=" flex flex-col items-center">
-        <h3 className="my-6 animate-bounce">Sura page coming soon...</h3>
+    <div className="">
+      <div>
+        {SuraFile.map((surah) =><SuraDetail key={surah.id} surah={surah} /> )}
       </div>
     </div>
   );
