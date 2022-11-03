@@ -6,10 +6,10 @@ const PageNotFound = () => {
   return (
     <div class="grid h-screen place-content-center bg-black">
       <div class="text-center">
-        <strong class="text-9xl font-black text-gray-200">404</strong>
+        <strong class="text-9xl font-black text-gray-200 select-none">404</strong>
 
         <p class="mt-4 text-white/50 text-[18px] ">
-          দুঃখিত আপনি যেই পেইজটি খুজছেন তা পাও্যা জাচ্ছে না।
+          দুঃখিত আপনি যেই পেইজটি খুজছেন তা পাওয়া জাচ্ছে না।
         </p>
 
         <Link

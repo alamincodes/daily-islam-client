@@ -20,7 +20,7 @@ const Banner = () => {
         <div>
           <img
             src={BannerBg}
-            className="lg:w-[500px] md:[500px] sm:w-[330px] aspect-video rounded-2xl border-4"
+            className="lg:w-[500px] md:w-[500px] sha sm:w-[330px] aspect-video rounded-2xl"
             draggable="false"
             alt=""
           />

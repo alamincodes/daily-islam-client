@@ -1,6 +1,7 @@
 import React from "react";
 import Banner from "./Banner";
 import Cards from "./Cards";
+import Faq from "./Faq";
 import HadithDownloadCard from "./Hadith/HadithDownloadCard";
 import Info from "./Info";
 // import MainBanner from "./MainBanner";
@@ -15,6 +16,7 @@ const home = () => {
         <Cards/>
         <QuranScetion/>
         <HadithDownloadCard/>
+        <Faq/>
     </div>
   );
 };
