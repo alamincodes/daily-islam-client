@@ -3,9 +3,9 @@ import React from "react";
 const Rat = ({ night, index }) => {
   return (
     <div>
-      <div className="bg-[#0B1120] rounded-md my-4 p-4 text-white/90 md:text-[18px] sm:text-[15px] shadow-[0_3px_10px_rgb(0,0,0,0.3)]">
+      <div className="bg-[#0B1120] rounded-md my-4 p-4 text-white/90 md:text-[18px] sm:text-[15px]">
         <h2><span className="bg-[#13283F] text-[#38BDF8] px-4 rounded-full">{index + 1}</span></h2>
-        <div className="text-center p-2 rounded-lg">
+        <div className="p-2 rounded-lg text-justify">
           {night.jikirName && (
             <h2 className="my-2">{night.jikirName}</h2>
           )}

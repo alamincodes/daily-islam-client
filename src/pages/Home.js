@@ -6,6 +6,7 @@ import HadithDownloadCard from "./Hadith/HadithDownloadCard";
 import Info from "./Info";
 // import MainBanner from "./MainBanner";
 import QuranScetion from "./QuranScetion";
+import WallpapersCard from "./Wallpaper/WallpapersCard";
 
 const home = () => {
   return (
@@ -16,6 +17,7 @@ const home = () => {
         <Cards/>
         <QuranScetion/>
         <HadithDownloadCard/>
+        <WallpapersCard/>
         <Faq/>
     </div>
   );

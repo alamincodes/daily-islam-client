@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import hadithImg from "../../Images/alquran.svg";
+import hadithImg from "../../Images/hadith.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const HadithDownloadCard = () => {
@@ -16,11 +16,18 @@ const HadithDownloadCard = () => {
           />
         </div>
         <div className="md:mr-20 lg:mr-[10rem] flex items-center flex-col justify-center md:ml-5">
-          <h2 className="md:text-4xl">হাদিস ডাউনলোড করুন</h2>
+          <h2 className="md:text-4xl font-bold"><span className="text-[#38BDF8]">হাদিস</span> ডাউনলোড করুন</h2>
+          <p className="text-center md:text-[16px] text-gray-400 sm:text-[12px] md:w-[500px]">
+            যারা হাদিস PDF ডাউনলোড করে অহলাইনে পড়তে চান তাদের জন্য আমাদের কিছু
+            হাদিস কালেক্ট করা। ডাউনলোড করুন এখনি।
+          </p>
           <Link to="/hadith-download">
-            <button className="flex items-center  px-8 py-2 hover:scale-95 duration-300 text-[15px] border-2 border-[#38BDF8] text-[#38BDF8] rounded-full my-3">
+            <button className="group flex items-center  px-8 py-2 text-[15px] border-2 border-[#38BDF8] text-[#38BDF8] rounded-full my-3">
               হাদিস ডাউনলোড করুন{" "}
-              <FontAwesomeIcon icon={faArrowRight} className="mx-1" />
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                className=" ml-3 h-6 w-6 transform transition-transform group-hover:translate-x-3"
+              />
             </button>
           </Link>
         </div>

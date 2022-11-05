@@ -93,7 +93,7 @@ body {
 }
 
 
-
+/*sm: banner image */
 @media only screen and (max-width: 600px) {
   .img-banner{
     margin: 0 calc(-50vw + 50%);

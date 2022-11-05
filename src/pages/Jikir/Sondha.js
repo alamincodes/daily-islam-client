@@ -16,13 +16,13 @@ const Sondha = ({ evening, index }) => {
             {index + 1}
           </span>
         </h2>
-        {title && <h2 className="font-bold text-center text-black">{title}</h2>}
+        {title && <h2 className="font-bold text-center text-[#38BDF8]">{title}</h2>}
         <div className="bg-[#13283F] p-2 rounded-lg">
-          {/* ========arbi====== */}
+          {/* arbi*/}
           {jikirArbi && <h2 className="my-2 font-semibold">{jikirArbi}</h2>}
-          {/* ========text======= */}
+          {/* text */}
           {text && <h2>{text}</h2>}
-          {/* =======bangla========= */}
+          {/* Bangla */}
           {jikirBangla && (
             <h2>
               <span className="font-bold text-[#38BDF8]">উচ্চারনঃ </span>
@@ -31,7 +31,7 @@ const Sondha = ({ evening, index }) => {
               </span>
             </h2>
           )}
-          {/* ======meaning==== */}
+          {/* meaning */}
           {meaning && (
             <h2 className="my-2 text-[15px]">
               <span className="font-bold text-[#38BDF8]">অর্থঃ</span> {meaning}
@@ -40,7 +40,7 @@ const Sondha = ({ evening, index }) => {
         </div>
         {/*===== read==== */}
         {read && (
-          <div className="bg-green-100  text-center font-bold p-3 my-2 sm:text-[15px] md:text-[18px] text-[#009000] rounded-md">
+          <div className="bg-green-100 text-center font-bold p-3 my-2 sm:text-[15px] md:text-[18px] text-[#009000] rounded-md">
             <h2>{read}</h2>
           </div>
         )}

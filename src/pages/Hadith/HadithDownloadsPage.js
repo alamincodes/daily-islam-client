@@ -12,7 +12,7 @@ import bukhariPart10 from '../../Images/BukhariSarif/Sahih-Bukhari-part-10.pdf';
 import HadithDownload from "./HadithDownload";
 const HadithDownloadsPage = () => {
   return (
-    <div className="grid sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-6 gap-3 ">
+    <div className="grid sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-6 gap-3 my-24">
       <HadithDownload hadithPdf={bukhariPart1} partName="প্রথম খন্ড" hadithName="সহীহ বুখারী শরিফ"/> 
       <HadithDownload hadithPdf={bukhariPart2} partName="দ্বিতীয় খন্ড" hadithName="সহীহ বুখারী শরিফ"/> 
       <HadithDownload hadithPdf={bukhariPart3} partName="তৃতীয় খন্ড" hadithName="সহীহ বুখারী শরিফ"/> 

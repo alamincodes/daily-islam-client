@@ -2,22 +2,28 @@ import React from "react";
 import quranPdf from "../Images/Quran.pdf";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import { useEffect } from "react";
 const Quran = () => {
+  const [surah, setSurah]= useState([]);
+  useEffect(() => {
+    const API = `https://alquranbd.com/api/tafheem/suraData/1/1`
+    fetch(API)
+    .then(res => res.json())
+    .then(data =>setSurah(data))
+  },[])
   return (
     <div>
-      
-      <div className="h-[100%] w-[100%] bg-white">
-        <embed
-          src={quranPdf}
-          className="w-[100%] min-h-screen bg-black"
-          type="application/pdf"
-        />
-      </div>
-      <div className="text-center"> 
-      <Link to="/">
-      <button className="text-center bg-black text-white px-5 py-[5px] my-2 rounded-full hover:scale-95 duration-300 text-[15px ]"> <FontAwesomeIcon icon={faArrowLeft}/> Home</button>
-      </Link>
+      <div className="">
+        {
+          surah.map(sura => (
+            <div>
+              <h2>{sura.ayah_text}</h2>
+              <h2>{sura.bn.token_trans}</h2>
+            </div>
+          ))
+        }
       </div>
     </div>
   );

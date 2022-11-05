@@ -14,7 +14,7 @@ const PageNotFound = () => {
 
         <Link
           to="/"
-          class="mt-6 inline-block rounded-full hover:text-black hover:bg-white transition duration-300 px-5 py-3 text-sm font-medium text-white border"
+          class="mt-6 inline-block rounded-full hover:text-white hover:bg-[#38BDF8] transition duration-300 px-5 py-3 text-sm font-medium text-[#38BDF8] border-2 border-[#38BDF8]"
         >
           Go Back Home <FontAwesomeIcon icon={faHome} className="ml-1" />
         </Link>

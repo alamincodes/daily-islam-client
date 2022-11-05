@@ -42,7 +42,7 @@ const HadithName = ({ hadith }) => {
         <h2 className="text-center sm:text-[16px] md:text-[22px] my-5 p-2 text-[#009000] font-semibold bg-green-100 rounded-lg">
           {hadithTopicName}
         </h2>
-        <h2 className="sm:text-[15px] md:text-[19px]">{hadithBangla}</h2>
+        <h2 className="sm:text-[15px] md:text-[19px] text-justify">{hadithBangla}</h2>
         <p className="text-right sm:text-[12px] md:text-[15px] mt-2">
           <span className="bg-blue-100 px-5 rounded-full text-[#000]">সহীহ বুখারী, হাদিস নংঃ {hadithNo.getDigitBanglaFromEnglish()}</span>
         </p>

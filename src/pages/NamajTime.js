@@ -74,7 +74,7 @@ const NamajTime = () => {
   return (
     <div>
       {/* --------------- */}
-      <h2 className="md:text-center sm:text-start my-3 text-[17px] font-semibold">নামাজের সময়</h2>
+      <h2 className="md:text-center sm:text-start my-3 text-[17px] font-semibold text-[#38BDF8]">নামাজের সময়</h2>
       {/* ---------- */}
       
         <div className="sm:text-[15px] md:text-2xl font-semibold text-gray-800">
@@ -101,7 +101,7 @@ const NamajTime = () => {
             {timings && <h2 className="md:mx-20 sm:mx-4">{get12hTimeStr(timings.Isha)}</h2>}
           </div>
           {/* --------------- */}
-          <h2 className="md:text-center sm:text-start my-3 text-[17px] font-semibold text-white">সূর্যোদয় এবং সূর্যাস্তের সময়</h2>
+          <h2 className="md:text-center sm:text-start my-3 text-[17px] font-semibold text-[#38BDF8]">সূর্যোদয় এবং সূর্যাস্তের সময়</h2>
           {/* ------------------ */}
           <div className="flex items-center py-5 my-2 justify-between  text-white bg-slate-800/[0.6] rounded-md">
             <h2 className="md:mx-20 sm:mx-4">সূর্যোদয়</h2>{" "}
@@ -116,7 +116,7 @@ const NamajTime = () => {
             </h2>}
           </div>
            {/* --------------- */}
-           <h2 className="md:text-center sm:text-start my-3 text-[17px] font-semibold text-white">রাতের বিভিন্ন অংশ</h2>
+           <h2 className="md:text-center sm:text-start my-3 text-[17px] font-semibold text-[#38BDF8]">রাতের বিভিন্ন অংশ</h2>
           {/* ------------------ */}
           <div className="flex items-center py-5 my-2 justify-between  text-white bg-slate-800/[0.6]  rounded-md">
             <h2 className="md:mx-20 sm:mx-4 ">রাতের প্রথম তৃতীয়ার্ধ</h2>{" "}

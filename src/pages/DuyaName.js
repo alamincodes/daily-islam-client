@@ -4,12 +4,12 @@ const DuyaName = ({duya}) => {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div>
-        <div className={isOpen? "bg-[#0B1120] mt-1 shadow-[0_3px_10px_rgb(0,0,0,0.3)] px-2 rounded-lg": "bg-[#0B1120] shadow-[0_3px_10px_rgb(0,0,0,0.1)] px-2 rounded-lg"}>
+        <div className={isOpen? "bg-[#0B1120] mt-1 px-2 rounded-lg": "bg-[#0B1120] px-2 rounded-lg"}>
           <div
             className=" flex justify-between items-center py-5 pl-2 cursor-pointer my-3"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <h2 className={isOpen? "text-[#38BDF8] md:text-2xl sm:text-[18px] font-bold":"text-[#38BDF8] md:text-2xl sm:text-[18px]"}>
+            <h2 className={isOpen? "text-white md:text-2xl sm:text-[18px] font-bold":"text-[#38BDF8] md:text-2xl sm:text-[18px]"}>
               {duya.title}
             </h2>
             {/* un and down icons */}

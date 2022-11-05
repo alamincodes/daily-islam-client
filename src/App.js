@@ -19,6 +19,7 @@ import NamajTime from "./pages/NamajTime";
 import GoToTop from "./pages/GoToTop";
 import Hadis from "./pages/Hadith/Hadis";
 import HadithDownloadsPage from "./pages/Hadith/HadithDownloadsPage";
+import Wallpaper from "./pages/Wallpaper/Wallpaper";
 function App() {
   return (
     <StrictMode>
@@ -36,6 +37,7 @@ function App() {
             <Route path="/quran" element={<Quran />} />
             <Route path="/prayer-time" element={<NamajTime />} />
             <Route path="/hadith-download" element={<HadithDownloadsPage/>} />
+            <Route path="/wallpaper" element={<Wallpaper/>} />
             {/* jikir nested route */}
             <Route path="/jikir" element={<Jikir />}>
               <Route index element={<JikirDay />} />
