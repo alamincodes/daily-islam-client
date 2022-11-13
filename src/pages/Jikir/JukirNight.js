@@ -4,7 +4,7 @@ import Rat from "./Rat";
 const JukirNight = () => {
   return (
     <div className="">
-      <h2 className="text-center bg-[#009000] mt-1 rounded-full text-white py-1">
+      <h2 className="text-center bg-[#38BDF8] mt-1 rounded-full text-white py-1">
       রাতের যিক্‌র
       </h2>
      {NightJikir.map((night, index) => (

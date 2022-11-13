@@ -3,7 +3,7 @@ import React from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 const Jikir = () => {
-  const activeLink = "bg-[#009000] z-[-1] text-white";
+  const activeLink = "bg-[#38BDF8] text-white";
   const normalLink = "";
   const jikirDay = [
     // { time: "সকাল", link: "/jikir" },
@@ -13,9 +13,9 @@ const Jikir = () => {
   return (
     <div>
       <div className="flex py-5 justify-center">
-        <div className="flex border border-white rounded-full overflow-hidden">
+        <div className="flex border-2 border-white rounded-full overflow-hidden">
           <NavLink to="/jikir">
-            <h3 className=" hover:bg-[#009000] hover:text-white px-3"> সকাল</h3>
+            <h3 className=" hover:bg-[#38BDF8] hover:text-white px-3"> সকাল</h3>
           </NavLink>
           {jikirDay.map((jikirTime) => (
             <NavLink
@@ -23,7 +23,7 @@ const Jikir = () => {
               className={({ isActive }) => (isActive ? activeLink : normalLink)}
               to={jikirTime.link}
             >
-              <h3 className=" hover:bg-[#009000] hover:z-[0] border-l border-white hover:text-white px-5 ">
+              <h3 className=" hover:bg-[#38BDF8] hover:z-[0] border-l-2 border-white hover:text-white px-5 ">
                 {jikirTime.time}
               </h3>
             </NavLink>

@@ -10,7 +10,7 @@ const Sokal = ({ day, index }) => {
 
   return (
     <div>
-      <div className="bg-[#0B1120] rounded-md my-4 p-4 text-white/90 md:text-[18px] sm:text-[15px] shadow-[0_3px_10px_rgb(0,0,0,0.3)]">
+      <div className="bg-[#0B1120] rounded-md my-4 p-4 text-gray-300 md:text-[18px] sm:text-[15px] shadow-[0_3px_10px_rgb(0,0,0,0.3)]">
         <h2 className="mb-2">
           <span className="bg-[#13283F] text-[#38BDF8] px-4 rounded-full">
             {index + 1}
@@ -42,7 +42,7 @@ const Sokal = ({ day, index }) => {
         </div>
         {/*===== read==== */}
         {read && (
-          <div className="bg-green-100 text-center font-bold p-3 my-2 sm:text-[15px] md:text-[18px] text-[#009000] rounded-md">
+          <div className="bg-[#87dcff] text-center font-bold p-3 my-2 sm:text-[15px] md:text-[18px] text-black rounded-md">
             <h2>{read}</h2>
           </div>
         )}

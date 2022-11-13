@@ -15,7 +15,7 @@ const WallpapersCard = () => {
             alt="quran"
           />
         </div>
-        <div className="md:mr-20 lg:mr-[10rem] flex items-center flex-col justify-center">
+        <div className=" flex items-center flex-col justify-center">
           <h2 className="md:text-4xl font-bold">ইসলামিক <span className="text-[#38BDF8]">ওয়ালপেপার</span></h2>
           <p className="text-center md:text-[16px] text-gray-400 sm:text-[12px] md:w-[500px]">
             যাদের ইসলামিক ওয়ালপেপার ভালো লাগে তারা ডাউনলোড করতে পারেন। আমাদের কালেক্ট করা কিছু ওয়ালপেপার। ডাউনলোড করুন ফ্রীতে।

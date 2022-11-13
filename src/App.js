@@ -14,17 +14,18 @@ import JikirDay from "./pages/Jikir/JikirDay";
 import JikirEvening from "./pages/Jikir/JikirEvening";
 import JukirNight from "./pages/Jikir/JukirNight";
 import ScrollToTop from "./pages/ScrollToTop";
-import Quran from "./pages/Quran";
 import NamajTime from "./pages/NamajTime";
 import GoToTop from "./pages/GoToTop";
 import Hadis from "./pages/Hadith/Hadis";
 import HadithDownloadsPage from "./pages/Hadith/HadithDownloadsPage";
 import Wallpaper from "./pages/Wallpaper/Wallpaper";
+import Quran from "./pages/Quran/Quran";
+import SuraDetail from "./pages/Sura/SuraDetail";
+import DetailSura from "./pages/Quran/DetailSura";
 function App() {
   return (
     <StrictMode>
       <BrowserRouter>
-      
         <ScrollToTop />
         <Navbar />
         <div className="sm:px-5 md:mt-20 sm:mt-[80px] max-w-screen-xl lg:px-8 mx-auto min-h-screen">
@@ -35,9 +36,10 @@ function App() {
             <Route path="/duya" element={<Duya />} />
             <Route path="/hadis" element={<Hadis />} />
             <Route path="/quran" element={<Quran />} />
+            <Route path="/surah/:surahId" element={<DetailSura/>} />
             <Route path="/prayer-time" element={<NamajTime />} />
-            <Route path="/hadith-download" element={<HadithDownloadsPage/>} />
-            <Route path="/wallpaper" element={<Wallpaper/>} />
+            <Route path="/hadith-download" element={<HadithDownloadsPage />} />
+            <Route path="/wallpaper" element={<Wallpaper />} />
             {/* jikir nested route */}
             <Route path="/jikir" element={<Jikir />}>
               <Route index element={<JikirDay />} />
@@ -48,7 +50,7 @@ function App() {
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </div>
-        <GoToTop/>
+        <GoToTop />
         <Footer />
       </BrowserRouter>
     </StrictMode>

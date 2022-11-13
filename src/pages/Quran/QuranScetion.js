@@ -1,5 +1,5 @@
 import React from "react";
-import quranJpg from "../Images/quran.png";
+import quranJpg from "../../Images/quran.svg";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -16,10 +16,12 @@ const QuranScetion = () => {
             alt="quran"
           />
         </div>
-        <div className="md:mr-20 lg:mr-[10rem] flex items-center flex-col justify-center">
-          <h2 className="md:text-4xl font-bold"><span className="text-[#38BDF8]">কোরআন শরীফ</span> পড়ুন</h2>
+        <div className=" flex items-center flex-col justify-center">
+          <h2 className="md:text-4xl font-bold">
+            <span className="text-[#38BDF8]">কোরআন শরীফ</span> পড়ুন
+          </h2>
           <p className="text-center md:text-[16px] text-gray-400 sm:text-[12px] md:w-[500px]">
-             {/* ************** */}
+            {/* ************** */}
           </p>
           <Link to="/quran">
             <button className="group flex items-center  px-8 py-2 text-[15px] border-2 border-[#38BDF8] text-[#38BDF8] rounded-full my-3">

@@ -5,7 +5,7 @@ import Faq from "./Faq";
 import HadithDownloadCard from "./Hadith/HadithDownloadCard";
 import Info from "./Info";
 // import MainBanner from "./MainBanner";
-import QuranScetion from "./QuranScetion";
+import QuranScetion from "./Quran/QuranScetion";
 import WallpapersCard from "./Wallpaper/WallpapersCard";
 
 const home = () => {

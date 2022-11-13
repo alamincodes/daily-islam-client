@@ -21,7 +21,7 @@ const Faq = () => {
             <div key={qus.id}>
               <details className="group shadow-1 p-2 sm:px-2 md:px-3 bg-slate-800/[0.6] my-1">
                 <summary className="flex cursor-pointer items-center justify-between">
-                  <h2 className="text-[16px] font-medium text-white/50">
+                  <h2 className="text-[16px] font-medium text-gray-400">
                     {qus.question}
                   </h2>
 
@@ -41,7 +41,7 @@ const Faq = () => {
                   </span>
                 </summary>
 
-                <p className="mt-4 select-none leading-relaxed text-[16px] text-white/95">
+                <p className="mt-4 select-none leading-relaxed text-[16px] text-gray-300">
                   {qus.answer}
                 </p>
               </details>

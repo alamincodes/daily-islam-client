@@ -10,7 +10,7 @@ const Sondha = ({ evening, index }) => {
   };
   return (
     <div>
-      <div className="bg-[#0B1120] rounded-md my-4 p-4 text-white/90 md:text-[18px] sm:text-[15px]">
+      <div className="bg-[#0B1120] rounded-md my-4 p-4 text-gray-200 md:text-[18px] sm:text-[15px]">
         <h2 className="mb-2">
           <span className="bg-[#13283F] text-[#38BDF8] px-4 rounded-full">
             {index + 1}
@@ -26,7 +26,7 @@ const Sondha = ({ evening, index }) => {
           {jikirBangla && (
             <h2>
               <span className="font-bold text-[#38BDF8]">উচ্চারনঃ </span>
-              <span className="text-[#009000] font-semibold">
+              <span className="text-gray-100 ">
                 {jikirBangla}
               </span>
             </h2>
@@ -40,7 +40,7 @@ const Sondha = ({ evening, index }) => {
         </div>
         {/*===== read==== */}
         {read && (
-          <div className="bg-green-100 text-center font-bold p-3 my-2 sm:text-[15px] md:text-[18px] text-[#009000] rounded-md">
+          <div className="bg-[#38BDF8] text-center font-bold p-3 my-2 sm:text-[15px] md:text-[18px] text-black rounded-md">
             <h2>{read}</h2>
           </div>
         )}

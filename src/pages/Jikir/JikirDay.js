@@ -5,7 +5,7 @@ const JikirDay = () => {
  
   return (
     <div>
-      <h2 className="text-center bg-[#009000] mt-1 rounded-full text-white py-1">
+      <h2 className="text-center bg-[#38BDF8] mt-1 rounded-full text-white py-1">
       সকালবেলার যিক্‌র
       </h2>
      {jikirDay.map((day, index) => (

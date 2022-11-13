@@ -15,7 +15,7 @@ const HadithDownloadCard = () => {
             alt=""
           />
         </div>
-        <div className="md:mr-20 lg:mr-[10rem] flex items-center flex-col justify-center md:ml-5">
+        <div className=" flex items-center flex-col justify-center md:ml-5">
           <h2 className="md:text-4xl font-bold"><span className="text-[#38BDF8]">হাদিস</span> ডাউনলোড করুন</h2>
           <p className="text-center md:text-[16px] text-gray-400 sm:text-[12px] md:w-[500px]">
             যারা হাদিস PDF ডাউনলোড করে অহলাইনে পড়তে চান তাদের জন্য আমাদের কিছু
