@@ -70,7 +70,29 @@ const NamajTime = () => {
       }
     );
   }
+  const finalEnglishToBanglaNumber = {
+    0: "০",
+    1: "১",
+    2: "২",
+    3: "৩",
+    4: "৪",
+    5: "৫",
+    6: "৬",
+    7: "৭",
+    8: "৮",
+    9: "৯",
+  };
 
+  String.prototype.getDigitBanglaFromEnglish = function () {
+    let retStr = this;
+    for (const x in finalEnglishToBanglaNumber) {
+      retStr = retStr.replace(
+        new RegExp(x, "g"),
+        finalEnglishToBanglaNumber[x]
+      );
+    }
+    return retStr;
+  };
   return (
     <div>
       {/* --------------- */}
@@ -80,65 +102,65 @@ const NamajTime = () => {
         <div className="sm:text-[18px] md:text-2xl font-semibold">
           <div className="flex items-center py-5 justify-between text-white bg-slate-800/[0.6] rounded-md">
             <h2 className="md:mx-20 sm:mx-4">ফজর</h2>{" "}
-            {timings && <h2 className="md:mx-20 sm:mx-4">{get12hTimeStr(timings.Fajr)}</h2>}
+            {timings && <h2 className="md:mx-20 sm:mx-4 tracking-[0.3rem]">{get12hTimeStr(timings.Fajr).getDigitBanglaFromEnglish()}</h2>}
           </div>
           <div className="flex items-center py-5 my-2 justify-between  text-white bg-slate-800/[0.6] rounded-md">
             <h2 className="md:mx-20 sm:mx-4">যোহর</h2>{" "}
-            {timings && <h2 className="md:mx-20 sm:mx-4">{get12hTimeStr(timings.Dhuhr)}</h2>}
+            {timings && <h2 className="md:mx-20 sm:mx-4 tracking-[0.3rem]">{get12hTimeStr(timings.Dhuhr).getDigitBanglaFromEnglish()}</h2>}
           </div>
           <div className="flex items-center py-5 my-2 justify-between text-white bg-slate-800/[0.6] rounded-md">
             <h2 className="md:mx-20 sm:mx-4">আসর</h2>{" "}
-            {timings && <h2 className="md:mx-20 sm:mx-4">{get12hTimeStr(timings.Asr)}</h2>}
+            {timings && <h2 className="md:mx-20 sm:mx-4 tracking-[0.3rem]">{get12hTimeStr(timings.Asr).getDigitBanglaFromEnglish()}</h2>}
           </div>
           <div className="flex items-center py-5 my-2 justify-between text-white bg-slate-800/[0.6] rounded-md">
             <h2 className="md:mx-20 sm:mx-4">মাগরিব</h2>{" "}
-            {timings && <h2 className="md:mx-20 sm:mx-4">
-              {get12hTimeStr(timings.Maghrib)}
+            {timings && <h2 className="md:mx-20 sm:mx-4 tracking-[0.3rem]">
+              {get12hTimeStr(timings.Maghrib).getDigitBanglaFromEnglish()}
             </h2>}
           </div>
           <div className="flex items-center py-5 my-2 justify-between text-white bg-slate-800/[0.6] rounded-md">
             <h2 className="md:mx-20 sm:mx-4">এশা</h2>{" "}
-            {timings && <h2 className="md:mx-20 sm:mx-4">{get12hTimeStr(timings.Isha)}</h2>}
+            {timings && <h2 className="md:mx-20 sm:mx-4 tracking-[0.3rem] tracking-[0.3rem]">{get12hTimeStr(timings.Isha).getDigitBanglaFromEnglish()}</h2>}
           </div>
           {/* --------------- */}
           <h2 className="md:text-center sm:text-start my-3 text-[20px] font-semibold text-[#38BDF8]">সূর্যোদয় এবং সূর্যাস্তের সময়</h2>
           {/* ------------------ */}
           <div className="flex items-center py-5 my-2 justify-between  text-white bg-slate-800/[0.6] rounded-md">
             <h2 className="md:mx-20 sm:mx-4">সূর্যোদয়</h2>{" "}
-           {timings &&  <h2 className="md:mx-20 sm:mx-4">
-              {get12hTimeStr(timings.Sunrise)}
+           {timings &&  <h2 className="md:mx-20 sm:mx-4 tracking-[0.3rem]">
+              {get12hTimeStr(timings.Sunrise).getDigitBanglaFromEnglish()}
             </h2>}
           </div>
           <div className="flex items-center py-5 my-2 justify-between  text-white bg-slate-800/[0.6]  rounded-md">
             <h2 className="md:mx-20 sm:mx-4">সূর্যাস্ত</h2>{" "}
-            { timings && <h2 className="md:mx-20 sm:mx-4">
-              {get12hTimeStr(timings.Sunset)}
+            { timings && <h2 className="md:mx-20 sm:mx-4 tracking-[0.3rem]">
+              {get12hTimeStr(timings.Sunset).getDigitBanglaFromEnglish()}
             </h2>}
           </div>
            {/* --------------- */}
            <h2 className="md:text-center sm:text-start my-3 text-[20px] font-semibold text-[#38BDF8]">রাতের বিভিন্ন অংশ</h2>
           {/* ------------------ */}
           <div className="flex items-center py-5 my-2 justify-between  text-white bg-slate-800/[0.6]  rounded-md">
-            <h2 className="md:mx-20 sm:mx-4 ">রাতের প্রথম তৃতীয়ার্ধ</h2>{" "}
-            { timings && <h2 className="md:mx-20 sm:mx-4">
-              {get12hTimeStr(timings.Firstthird)}
+            <h2 className="md:mx-20 sm:mx-4">রাতের প্রথম তৃতীয়ার্ধ</h2>{" "}
+            { timings && <h2 className="md:mx-20 sm:mx-4 tracking-[0.3rem]">
+              {get12hTimeStr(timings.Firstthird).getDigitBanglaFromEnglish()}
             </h2>}
           </div>
           <div className="flex items-center py-5 my-2 justify-between  text-white bg-slate-800/[0.6] rounded-md">
             <h2 className="md:mx-20 sm:mx-4">মধ্যরাত</h2>{" "}
-          {timings &&   <h2 className="md:mx-20 sm:mx-4">
-              {get12hTimeStr(timings.Midnight)}
+          {timings &&   <h2 className="md:mx-20 sm:mx-4 tracking-[0.3rem]">
+              {get12hTimeStr(timings.Midnight).getDigitBanglaFromEnglish()}
             </h2>}
           </div>
           <div className="flex items-center py-5 my-2 justify-between  text-white bg-slate-800/[0.6] rounded-md">
             <h2 className="md:mx-20 sm:mx-4 ">রাতের শেষ তৃতীয়ার্ধ</h2>{" "}
-           {timings &&  <h2 className="md:mx-20 sm:mx-4">
-              {get12hTimeStr(timings.Lastthird)}
+           {timings &&  <h2 className="md:mx-20 sm:mx-4 tracking-[0.3rem]">
+              {get12hTimeStr(timings.Lastthird).getDigitBanglaFromEnglish()}
             </h2>}
           </div>
           <div className="flex items-center py-5 my-2 justify-between  text-white bg-slate-800/[0.6] rounded-md">
             <h2 className="md:mx-20 sm:mx-4">সেহরির শেষ সময়</h2>{" "}
-          {timings &&   <h2 className="md:mx-20 sm:mx-4">{get12hTimeStr(timings.Imsak)}</h2>}
+          {timings &&   <h2 className="md:mx-20 sm:mx-4 tracking-[0.3rem]">{get12hTimeStr(timings.Imsak).getDigitBanglaFromEnglish()}</h2>}
           </div>
         </div>
       

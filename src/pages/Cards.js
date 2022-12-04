@@ -3,7 +3,7 @@ import Namaj from "../Images/icons/namaj.svg";
 import Tasbih from "../Images/icons/tasbi.svg";
 import Hadis from "../Images/icons/hadith.svg";
 import Duya from "../Images/icons/duya.svg";
-import Allah from "../Images/icons/allah.png";
+import Allah from "../Images/icons/allah.svg";
 import Sura from "../Images/icons/surah.svg";
 import { Link } from "react-router-dom";
 
@@ -34,6 +34,30 @@ const Cards = () => {
     setCurrentTime(time);
   };
   setInterval(updateTime, 1000);
+
+  const finalEnglishToBanglaNumber = {
+    0: "০",
+    1: "১",
+    2: "২",
+    3: "৩",
+    4: "৪",
+    5: "৫",
+    6: "৬",
+    7: "৭",
+    8: "৮",
+    9: "৯",
+  };
+
+  String.prototype.getDigitBanglaFromEnglish = function () {
+    let retStr = this;
+    for (const x in finalEnglishToBanglaNumber) {
+      retStr = retStr.replace(
+        new RegExp(x, "g"),
+        finalEnglishToBanglaNumber[x]
+      );
+    }
+    return retStr;
+  };
   return (
     <div className="">
       {/* <h3 className="text-center text-3xl mt-10">ফিচার</h3> */}
@@ -42,7 +66,7 @@ const Cards = () => {
         <h4 className="md:text-3xl sm:text-[20px] font-bold mx-5">সময়</h4>
 
         <h2 className="md:text-4xl sm:text-[20px] font-semibold md:tracking-[0.5rem] sm:tracking-[1px]">
-          {currentTime}
+          {currentTime.getDigitBanglaFromEnglish()}
         </h2>
 
         <Link to="/prayer-time">
@@ -57,15 +81,15 @@ const Cards = () => {
           <div key={card.id}>
             <Link to={card.linkPage}>
               <div>
-                <div className="border-2 border-[#38BDF8] bg-[#13283F] flex md:flex-row-reverse sm:flex-col-reverse justify-center items-center py-5 px-2  hover:scale-95 duration-500 rounded-md">
+                <div className="border-2 border-[#38BDF8] bg-[#13283F] flex md:flex-row-reverse sm:flex-col-reverse justify-center items-center py-5 hover:scale-95 duration-500 rounded-md">
                   {" "}
-                  <h2 className="md:text-[20px] sm:text-[15px] text-white">
+                  <h2 className="md:text-[20px] sm:text-[15px] text-white pl-1">
                     {card.name}
                   </h2>
                   <img
                     src={card.img}
                     draggable="false"
-                    className="w-12 h-12 "
+                    className="w-12 h-12 relative md:mb-3 sm:mb-auto"
                     alt={card.name}
                   />
                 </div>

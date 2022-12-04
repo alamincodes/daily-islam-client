@@ -24,7 +24,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full bg-[#0B1221] md:h-[70px] sm:h-[80px] fixed z-20">
+    <div className="w-full bg-[#0B1120]/80 backdrop-blur-2xl transition-colors duration-500 border-b border-gray-600 md:h-[70px] sm:h-[80px] fixed z-20">
       <div className=" max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
         {/* nav logo */}
         <NavLink to="/">
@@ -32,7 +32,7 @@ const Navbar = () => {
             <h1 className="md:text-3xl sm:text-2xl font-bold text-white flex items-center">
               {" "}
               <span>DAILY</span>{" "}
-              <img src={Logo} draggable="false" className="w-12" alt="" />
+              <img src={Logo} draggable="false" className="w-12 " alt="" />
               <span>ISLAM</span>
             </h1>
           </div>
@@ -42,7 +42,7 @@ const Navbar = () => {
           <ul className="flex text-white items-center cursor-pointer gap-2">
             <NavLink to="/">
               {" "}
-              <li className="hover:bg-[#38BDF8] rounded-sm  text-white  px-4 hover:text-white">
+              <li className="hover:bg-[#38BDF8] rounded-sm text-white px-4 hover:text-white">
                 হোম
               </li>
             </NavLink>
@@ -67,9 +67,9 @@ const Navbar = () => {
 
         <div onClick={handleNav} className="block md:hidden lg:hidden">
           {nav ? (
-            <AiOutlineClose size={30} className="text-white" />
+            <AiOutlineClose size={30} className="text-[#38BDF8]" />
           ) : (
-            <AiOutlineMenu size={30} className="text-white" />
+            <AiOutlineMenu size={30} className="text-[#38BDF8]" />
           )}
         </div>
 
@@ -77,45 +77,45 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? " w-full bg-black text-white absolute top-[80px] left-0 flex justify-center text-center md:hidden"
+              ? "w-full bg-[#0B1221] text-[15px] border-b border-t border-gray-600 text-white absolute top-[80px] left-0 flex justify-end text-right px-3 md:hidden"
               : "absolute left-[-100%]"
           }
         >
           <ul>
             <Link to="/">
-              <li className="hover:bg-white hover:text-black rounded-lg p-4 my-1">
+              <li className="hover:text-[#38BDF8] rounded-lg p-2 my-2">
                 হোম
               </li>
             </Link>
             <Link to="/namaj">
-              <li className="hover:bg-white hover:text-black rounded-lg p-4">
+              <li className="hover:text-[#38BDF8] rounded-lg p-2 my-2">
                 নামাজ
               </li>
             </Link>
             <Link to="/duya">
-              <li className="hover:bg-white hover:text-black rounded-lg p-4">
+              <li className="hover:text-[#38BDF8] rounded-lg p-2 my-2">
                 {" "}
                 দোয়া
               </li>
             </Link>{" "}
             <Link to="/jikir">
-              <li className="hover:bg-white hover:text-black rounded-lg p-4">
+              <li className="hover:text-[#38BDF8] rounded-lg p-2 my-2">
                 যিক্‌র
               </li>
             </Link>
             <Link to="/hadis">
-              <li className="hover:bg-white hover:text-black rounded-lg p-4">
+              <li className="hover:text-[#38BDF8] rounded-lg p-2 my-2">
                 হাদিস
               </li>
             </Link>
             <Link to="/sura">
-              <li className="hover:bg-white hover:text-black rounded-lg p-4">
+              <li className="hover:text-[#38BDF8] rounded-lg p-2 my-2">
                 {" "}
                 সূরা
               </li>
             </Link>
             <Link to="/allah">
-              <li className="hover:bg-white hover:text-black mb-1 rounded-lg p-4">
+              <li className="hover:text-[#38BDF8] rounded-lg p-1 my-2">
                 {" "}
                 আল্লাহর নাম
               </li>

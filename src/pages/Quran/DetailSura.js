@@ -24,8 +24,9 @@ const DetailSura = () => {
   }
   return (
     <div className="mt-24 text-right">
+      <h2 className="text-center mb-5"> <span  className="bg-purple-200 text-purple-600 rounded-full px-4">Development mode</span></h2>
       {surah.map((sura) => (
-        <div>
+        <div key={sura.id}>
           <h2>{sura.ayah_text}</h2>
           <h2>{sura.bn[0].token_trans}</h2>
         </div>

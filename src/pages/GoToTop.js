@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-
+import upArrow from "../Images/icons/upArrow.svg";
 const GoToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
   const goToTopBtn = () => {
@@ -23,8 +23,8 @@ const GoToTop = () => {
   return (
     <div>
       {isVisible && (
-        <button className="bg-white right-5 bottom-10  w-[40px] h-[40px] fixed rounded-full z-[2] flex items-center justify-center" onClick={goToTopBtn}>
-          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
+        <button className="bg-[#38bdf8] right-5 bottom-10  w-[40px] h-[40px] fixed  rounded-[10px] z-[2] flex items-center justify-center" onClick={goToTopBtn}>
+          <img src={upArrow} className="h-7" alt="" />
         </button>
       )}
     </div>
