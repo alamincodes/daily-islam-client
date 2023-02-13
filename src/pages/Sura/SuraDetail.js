@@ -3,7 +3,7 @@ import React from "react";
 const SuraDetail = ({ surah }) => {
   return (
     <div>
-      <div className="bg-[#0B1120] p-2">
+      <div className="bg-[#0B1120] p-2 my-10 rounded-lg">
         <h2 className="font-bold text-[20px] text-center text-[#38BDF8] mb-2">
           {surah.suraName}
         </h2>

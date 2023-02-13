@@ -10,7 +10,7 @@ const Rat = ({ night, index }) => {
             <h2 className="my-2">{night.jikirName}</h2>
           )}
           {night.read && (
-           <div className="bg-[#87dcff] text-black text-center font-bold p-3 my-2 sm:text-[15px] md:text-[18px] rounded-md">
+           <div className="bg-[#38bdf8] text-black text-center font-bold p-3 my-2 sm:text-[15px] md:text-[18px] rounded-md">
            <h2>{night.read}</h2>
          </div>
           )}

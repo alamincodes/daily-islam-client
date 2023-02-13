@@ -19,7 +19,7 @@ const Faq = () => {
         <div className="md:w-[50%] sm:w-auto sm:my-3 md:my-auto rounded-md">
           {queAns.map((qus) => (
             <div key={qus.id}>
-              <details className="group shadow-1 p-2 sm:px-2 md:px-3 bg-slate-800/[0.6] my-1">
+              <details className="group shadow-1 p-2 sm:px-2 md:px-3 bg-slate-800/[0.6] my-1 ">
                 <summary className="flex cursor-pointer items-center justify-between">
                   <h2 className="text-[16px] font-medium text-gray-400">
                     {qus.question}

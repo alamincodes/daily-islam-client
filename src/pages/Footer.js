@@ -7,7 +7,7 @@ const footer = () => {
         <div className="max-w-5xl px-4 py-10 mx-auto sm:px-6 lg:px-8">
           <div className="flex justify-center items-center flex-col">
             <div className="select-none text-white mt-5">
-              <h2 className="flex items-center uppercase font-bold md:text-3xl sm:text-2xl">
+              <h2 className="font-secondary flex items-center uppercase font-bold md:text-3xl sm:text-2xl">
                 <span>Daily</span> 
                 <img
                 src={Logo}

@@ -9,7 +9,7 @@ const AllahName = ({ allahName }) => {
   };
   return (
     <div>
-      <div className="text-gray-200 rounded-md  bg-[#0B1120] shadow-[0_3px_10px_rgb(0,0,0,0.1)] p-2">
+      <div className="text-gray-200 rounded-md bg-[#0B1120] shadow-[0_3px_10px_rgb(0,0,0,0.1)] p-2">
         <h2 className="text-center text-[#009000] font-semibold md:text-[22px] sm:text-[24px]">
           {bangla}
         </h2>
@@ -19,22 +19,22 @@ const AllahName = ({ allahName }) => {
         <h2 className="text-center md:text-[18px] sm:text-[24px]">{meaning}</h2>
         <div className="text-center">
           {modal ? (
-            <button className="text-white text-[18px] bg-purple-500 rounded-full px-10" onClick={toggleModal}>
+            <button className="text-white text-[15px] bg-purple-500 rounded-full px-6" onClick={toggleModal}>
               close
             </button>
           ) : (
             <button
-              className="text-white text-[17px] bg-[#38BDf8] rounded-full px-10 hover:scale-105 duration-300 "
+              className="text-white text-[15px] bg-[#38BDf8] rounded-full px-6 "
 
               onClick={toggleModal}
             >
-              see more
+              See more
             </button>
           )}
         </div>
         {modal && (
           <div>
-            <p className="text-[15px]  shadow-[0_3px_10px_rgb(0,0,0,0.3)] p-2 mt-1 rounded-md">
+            <p className="text-[15px] p-2 mt-1 rounded-md">
               {faz}
             </p>
           </div>

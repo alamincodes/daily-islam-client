@@ -42,7 +42,7 @@ const Sokal = ({ day, index }) => {
         </div>
         {/*===== read==== */}
         {read && (
-          <div className="bg-[#87dcff] text-center font-bold p-3 my-2 sm:text-[15px] md:text-[18px] text-black rounded-md">
+          <div className="bg-[#38bdf8] text-center font-bold p-3 my-2 sm:text-[15px] md:text-[18px] text-black rounded-md">
             <h2>{read}</h2>
           </div>
         )}

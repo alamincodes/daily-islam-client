@@ -24,12 +24,12 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full bg-[#0B1120]/80 backdrop-blur-2xl transition-colors duration-500 border-b border-gray-600 md:h-[70px] sm:h-[80px] fixed z-20">
+    <div className="w-full bg-[#0B1120]/80 backdrop-blur-3xl transition-colors duration-500 border-b border-gray-600 md:h-[70px] sm:h-[80px] fixed z-20">
       <div className=" max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
         {/* nav logo */}
         <NavLink to="/">
           <div className="select-none text-black ">
-            <h1 className="md:text-3xl sm:text-2xl font-bold text-white flex items-center">
+            <h1 className="md:text-3xl font-secondary sm:text-2xl font-bold text-white flex items-center">
               {" "}
               <span>DAILY</span>{" "}
               <img src={Logo} draggable="false" className="w-12 " alt="" />

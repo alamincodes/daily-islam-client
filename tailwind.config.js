@@ -2,6 +2,10 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
+    fontFamily: {
+      primary: 'Anek Bangla',
+      secondary: 'Inter, sans-serif',
+    },
     screens: {
       sm: "0px",
       md: "768px",

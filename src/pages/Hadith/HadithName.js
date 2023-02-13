@@ -5,7 +5,7 @@ const HadithName = ({ hadith }) => {
   const regex = hadithBengali;
   const regexTwo = topicName;
   const hadithBangla = regex.replace(
-    /<br>(?=(?:\s*<[^>]*>)*$)|(<br>)|#39|&ldquo;|&rdquo;|&zwnj;|&mdash;|&rsquo;|<[^>]*>/gi,
+    /<br>(?=(?:\s*<[^>]*>)*$)|(<br>)|#39|&ldquo;|&rdquo;|&zwnj;|&mdash;|&rsquo;|&|;|<[^>]*>/gi,
     ""
   );
   const hadithTopicName = regexTwo.replace(
@@ -39,12 +39,12 @@ const HadithName = ({ hadith }) => {
   return (
     <div>
       <div className="bg-[#0B1120] text-gray-100 rounded-lg p-2 my-2 px-3">
-        <h2 className="text-center sm:text-[16px] md:text-[22px] my-5 p-2 text-black font-semibold bg-[#87dcff] rounded-lg">
+        <h2 className="text-center sm:text-[16px] md:text-[22px] my-5 p-2 text-black font-semibold bg-[#38bdf8] rounded-lg">
           {hadithTopicName}
         </h2>
         <h2 className="sm:text-[15px] md:text-[19px] text-justify">{hadithBangla}</h2>
         <p className="text-right sm:text-[12px] md:text-[15px] mt-2">
-          <span className="bg-[#87dcff] px-5 rounded-full text-[#000]">সহীহ বুখারী, হাদিস নংঃ {hadithNo.getDigitBanglaFromEnglish()}</span>
+          <span className="bg-[#38bdf8] px-5 rounded-full text-[#000]">সহীহ বুখারী, হাদিস নংঃ {hadithNo.getDigitBanglaFromEnglish()}</span>
         </p>
       </div>
     </div>
