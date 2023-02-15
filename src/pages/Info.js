@@ -6,7 +6,15 @@ import quranSvg from "../Images/info-img/quran.svg";
 const Info = () => {
   return (
     <div className="mt-24">
-        <h2 className="text-[1.875rem] font-bold text-white text-center"> আমাদের <span className="text-[#38BDF8]">সার্ভিস গুলো</span> দেখেনিন</h2>
+      <div className="max-w-[300px] text-center mx-auto">
+        <h2 className="lg:text-[1.875rem] sm:text-2xl font-bold text-white ">
+          {" "}
+          এই সাইট থেকে <span className="text-[#38BDF8]">
+            যা শিখতে পারবেন
+          </span>{" "}
+          দেখেনিন
+        </h2>
+      </div>
       <div className="grid md:grid-cols-3 md:gap-3 sm:gap-2 sm:grid-cols-1 md:my-1 sm:my-10">
         <InfoCards
           title="নামাজের দোয়া"

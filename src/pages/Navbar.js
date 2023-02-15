@@ -20,7 +20,8 @@ const Navbar = () => {
     { id: 2, name: "দোয়া", link: "/duya" },
     { id: 3, name: "যিক্‌র", link: "/jikir" },
     { id: 4, name: "হাদিস", link: "/hadis" },
-    { id: 5, name: "আল্লাহর নাম", link: "/allah" },
+    { id: 5, name: "কোরআন পড়ুন", link: "/quran" },
+    { id: 6, name: "আল্লাহর নাম", link: "/allah" },
   ];
 
   return (
@@ -55,7 +56,7 @@ const Navbar = () => {
                   isActive ? activeLink : normalLink
                 }
               >
-                <li className="hover:bg-[#38BDF8] rounded-sm text-white  px-4 hover:text-white">
+                <li className="hover:bg-[#38BDF8] rounded-sm text-white px-4 hover:text-white">
                   {navName.name}
                 </li>
               </NavLink>
@@ -77,45 +78,75 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? "w-full bg-[#0B1221] text-[15px] border-b border-t border-gray-600 text-white absolute top-[80px] left-0 flex justify-end text-right px-3 md:hidden"
-              : "absolute left-[-100%]"
+              ? "w-[40%] rounded-bl-lg bg-gradient-to-r  from-[#121518] to-slate-800 duration-300 text-[15px] border-gray-600 text-white absolute top-[80px] right-0 flex justify-center text-center px-3 md:hidden"
+              : "absolute right-[-100%] top-[80px] duration-300"
           }
         >
           <ul>
             <Link to="/">
-              <li className="hover:text-[#38BDF8] rounded-lg p-2 my-2">
+              <li
+                onClick={() => setNav(false)}
+                className="hover:text-[#38BDF8] rounded-lg p-2 my-2"
+              >
                 হোম
               </li>
             </Link>
             <Link to="/namaj">
-              <li className="hover:text-[#38BDF8] rounded-lg p-2 my-2">
+              <li
+                onClick={() => setNav(false)}
+                className="hover:text-[#38BDF8] rounded-lg p-2 my-2"
+              >
                 নামাজ
               </li>
             </Link>
             <Link to="/duya">
-              <li className="hover:text-[#38BDF8] rounded-lg p-2 my-2">
+              <li
+                onClick={() => setNav(false)}
+                className="hover:text-[#38BDF8] rounded-lg p-2 my-2"
+              >
                 {" "}
                 দোয়া
               </li>
             </Link>{" "}
             <Link to="/jikir">
-              <li className="hover:text-[#38BDF8] rounded-lg p-2 my-2">
+              <li
+                onClick={() => setNav(false)}
+                className="hover:text-[#38BDF8] rounded-lg p-2 my-2"
+              >
                 যিক্‌র
               </li>
             </Link>
             <Link to="/hadis">
-              <li className="hover:text-[#38BDF8] rounded-lg p-2 my-2">
+              <li
+                onClick={() => setNav(false)}
+                className="hover:text-[#38BDF8] rounded-lg p-2 my-2"
+              >
                 হাদিস
               </li>
             </Link>
             <Link to="/sura">
-              <li className="hover:text-[#38BDF8] rounded-lg p-2 my-2">
+              <li
+                onClick={() => setNav(false)}
+                className="hover:text-[#38BDF8] rounded-lg p-2 my-2"
+              >
                 {" "}
                 সূরা
               </li>
             </Link>
+            <Link to="/quran">
+              <li
+                onClick={() => setNav(false)}
+                className="hover:text-[#38BDF8] rounded-lg p-2 my-2"
+              >
+                {" "}
+                কোরআন পড়ুন
+              </li>
+            </Link>
             <Link to="/allah">
-              <li className="hover:text-[#38BDF8] rounded-lg p-1 my-2">
+              <li
+                onClick={() => setNav(false)}
+                className="hover:text-[#38BDF8] rounded-lg p-1 my-2"
+              >
                 {" "}
                 আল্লাহর নাম
               </li>

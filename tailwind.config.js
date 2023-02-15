@@ -3,7 +3,7 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     fontFamily: {
-      primary: 'Anek Bangla',
+      primary: 'Anek Bangla, sans-serif',
       secondary: 'Inter, sans-serif',
     },
     screens: {

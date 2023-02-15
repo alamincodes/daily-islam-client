@@ -1,4 +1,5 @@
 import React from "react";
+import Opinion from "../Opinion";
 import Banner from "./Banner";
 import Cards from "./Cards";
 import Faq from "./Faq";
@@ -19,6 +20,7 @@ const home = () => {
         <HadithDownloadCard/>
         <WallpapersCard/>
         <Faq/>
+        <Opinion/>
     </div>
   );
 };

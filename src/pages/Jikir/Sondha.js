@@ -16,7 +16,9 @@ const Sondha = ({ evening, index }) => {
             {index + 1}
           </span>
         </h2>
-        {title && <h2 className="font-bold text-center text-[#38BDF8]">{title}</h2>}
+        {title && (
+          <h2 className="font-bold text-center text-[#38BDF8]">{title}</h2>
+        )}
         <div className="bg-[#13283F] p-2 rounded-lg">
           {/* arbi*/}
           {jikirArbi && <h2 className="my-2 font-semibold">{jikirArbi}</h2>}
@@ -26,9 +28,7 @@ const Sondha = ({ evening, index }) => {
           {jikirBangla && (
             <h2>
               <span className="font-bold text-[#38BDF8]">উচ্চারনঃ </span>
-              <span className="text-gray-100 ">
-                {jikirBangla}
-              </span>
+              <span className="text-gray-100 ">{jikirBangla}</span>
             </h2>
           )}
           {/* meaning */}
@@ -46,14 +46,11 @@ const Sondha = ({ evening, index }) => {
         )}
         <div className="flex justify-end text-[15px]">
           {modal ? (
-            <button className="text-purple-600" onClick={toggleModal}>
+            <button className="text-[#38bdf8]" onClick={toggleModal}>
               close
             </button>
           ) : (
-            <button
-              className="text-purple-600 cursor-pointer "
-              onClick={toggleModal}
-            >
+            <button className="text-[#38bdf8]" onClick={toggleModal}>
               see more
             </button>
           )}

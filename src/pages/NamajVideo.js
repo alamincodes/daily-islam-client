@@ -19,8 +19,8 @@ const Namaj = () => {
   return (
     <div className="mt-24">
       {/* ========duya========= */}
-      {Namajduya.map((namaj) => (
-        <NamajDuya key={namaj.id} namaj={namaj} />
+      {Namajduya.map((namaj, index) => (
+        <NamajDuya key={namaj.id} namaj={namaj} index={index} />
       ))}
 
       {/* --------video section-------- */}

@@ -3,7 +3,7 @@ import SuraFile from "../../Sura.json";
 import SuraDetail from "./SuraDetail";
 const Sura = () => {
   return (
-    <div className="">
+    <div className="mt-[100px]">
       <div>
         {SuraFile.map((surah) =><SuraDetail key={surah.id} surah={surah} /> )}
       </div>

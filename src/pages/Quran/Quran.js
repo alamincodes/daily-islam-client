@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import ReadQuran from "./ReadQuran";
 import Loading from "../Loading";
+import DetailSura from "./DetailSura";
 const Quran = () => {
   const [surah, setSurah] = useState([]);
   const [isLoading, setIsLoading] = useState(false);

@@ -48,12 +48,12 @@ const Sokal = ({ day, index }) => {
         )}
         <div className="flex justify-end text-[15px]">
           {modal ? (
-            <button className="text-purple-600" onClick={toggleModal}>
+            <button className="text-[#38bdf8]" onClick={toggleModal}>
               close
             </button>
           ) : (
             <button
-              className="text-purple-600 cursor-pointer "
+              className="text-[#38bdf8]"
               onClick={toggleModal}
             >
               see more

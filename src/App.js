@@ -20,8 +20,8 @@ import Hadis from "./pages/Hadith/Hadis";
 import HadithDownloadsPage from "./pages/Hadith/HadithDownloadsPage";
 import Wallpaper from "./pages/Wallpaper/Wallpaper";
 import Quran from "./pages/Quran/Quran";
-import SuraDetail from "./pages/Sura/SuraDetail";
 import DetailSura from "./pages/Quran/DetailSura";
+import ThankyouPage from "./pages/ThankyouPage";
 function App() {
   return (
     <StrictMode>
@@ -40,6 +40,8 @@ function App() {
             <Route path="/prayer-time" element={<NamajTime />} />
             <Route path="/hadith-download" element={<HadithDownloadsPage />} />
             <Route path="/wallpaper" element={<Wallpaper />} />
+            <Route path="/wallpaper" element={<Wallpaper />} />
+            <Route path="/thankyou" element={<ThankyouPage/>} />
             {/* jikir nested route */}
             <Route path="/jikir" element={<Jikir />}>
               <Route index element={<JikirDay />} />

@@ -12,8 +12,10 @@ const Banner = () => {
           </span>
 
           <span className="font-bold text-center md:text-[20px] sm:text-[18px] ">
-            "হে ঈমানদারগন! তোমরা আল্লাহকে অধিক পরিমানে স্মরন করো। আর সকাল-সন্ধায়
-            তার পবিত্রতা ঘোষনা করো।"
+            "হে ঈমানদারগন! তোমরা{" "}
+            <span className="text-[#38bdf8]">আল্লাহকে</span> অধিক পরিমানে স্মরন
+            করো। আর সকাল-সন্ধায় তার{" "}
+            <span className="text-[#05ff58]">পবিত্রতা ঘোষনা করো।</span>"
           </span>
         </div>
         {/* right */}
