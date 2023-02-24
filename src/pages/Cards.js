@@ -16,6 +16,7 @@ const Cards = () => {
     { id: 5, name: "সূরা", img: Sura, linkPage: "sura" },
     { id: 6, name: "আল্লাহর ৯৯টি নাম", img: Allah, linkPage: "allah" },
   ];
+
   let time = new Date().toLocaleString("en-US", {
     hour: "numeric",
     minute: "numeric",
@@ -59,7 +60,7 @@ const Cards = () => {
     return retStr;
   };
   return (
-    <div className="">
+    <div className="my-28">
       {/* <h3 className="text-center text-3xl mt-10">ফিচার</h3> */}
       {/* ----------time------------- */}
       <div className="flex justify-between items-center bg-[#13283F] text-white select-none md:flex-row sm:flex-col md:py-3 rounded-md sm:py-2">

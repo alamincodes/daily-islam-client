@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import upArrow from "../Images/icons/upArrow.svg";
+import { HiArrowNarrowUp } from "react-icons/hi";
 const GoToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
   const goToTopBtn = () => {
@@ -23,8 +23,11 @@ const GoToTop = () => {
   return (
     <div>
       {isVisible && (
-        <button className="bg-[#38bdf8] right-5 bottom-10  w-[40px] h-[40px] fixed  rounded-[10px] z-[2] flex items-center justify-center" onClick={goToTopBtn}>
-          <img src={upArrow} className="h-7" alt="" />
+        <button
+          className="bg-[#38bdf8] right-5 bottom-10  w-[40px] h-[40px] fixed  rounded-[10px] z-[2] flex items-center justify-center"
+          onClick={goToTopBtn}
+        >
+          <HiArrowNarrowUp />
         </button>
       )}
     </div>

@@ -15,12 +15,22 @@ const Navbar = () => {
   // active navLink end
 
   const navbarNames = [
-    // { name: "হোম", link: "/" },
+    // { id: 8, name: "হোম", link: "/" },
     { id: 1, name: "নামাজ", link: "/namaj" },
     { id: 2, name: "দোয়া", link: "/duya" },
     { id: 3, name: "যিক্‌র", link: "/jikir" },
     { id: 4, name: "হাদিস", link: "/hadis" },
-    { id: 5, name: "কোরআন পড়ুন", link: "/quran" },
+    { id: 5, name: "কোরআন", link: "/quran" },
+    { id: 6, name: "আল্লাহর নাম", link: "/allah" },
+  ];
+  // phone nav name and link
+  const phoneNavbarNames = [
+    { id: 8, name: "হোম", link: "/" },
+    { id: 1, name: "নামাজ", link: "/namaj" },
+    { id: 2, name: "দোয়া", link: "/duya" },
+    { id: 3, name: "যিক্‌র", link: "/jikir" },
+    { id: 4, name: "হাদিস", link: "/hadis" },
+    { id: 5, name: "কোরআন", link: "/quran" },
     { id: 6, name: "আল্লাহর নাম", link: "/allah" },
   ];
 
@@ -39,7 +49,7 @@ const Navbar = () => {
           </div>
         </NavLink>
         {/* top nav */}
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex">
           <ul className="flex text-white items-center cursor-pointer gap-2">
             <NavLink to="/">
               {" "}
@@ -66,7 +76,7 @@ const Navbar = () => {
 
         {/* Hamburger menu */}
 
-        <div onClick={handleNav} className="block md:hidden lg:hidden">
+        <div onClick={handleNav} className="block lg:hidden">
           {nav ? (
             <AiOutlineClose size={30} className="text-[#38BDF8]" />
           ) : (
@@ -78,79 +88,23 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? "w-[40%] rounded-bl-lg bg-gradient-to-r  from-[#121518] to-slate-800 duration-300 text-[15px] border-gray-600 text-white absolute top-[80px] right-0 flex justify-center text-center px-3 md:hidden"
+              ? "w-[40%] md:w-[200px] rounded-bl-lg bg-gradient-to-r  from-[#121518] to-slate-800 duration-300 text-[15px] border-gray-600 text-white absolute md:top-[70px] top-[80px] right-0 flex justify-center text-center px-3 lg:hidden"
               : "absolute right-[-100%] top-[80px] duration-300"
           }
         >
           <ul>
-            <Link to="/">
-              <li
-                onClick={() => setNav(false)}
-                className="hover:text-[#38BDF8] rounded-lg p-2 my-2"
-              >
-                হোম
-              </li>
-            </Link>
-            <Link to="/namaj">
-              <li
-                onClick={() => setNav(false)}
-                className="hover:text-[#38BDF8] rounded-lg p-2 my-2"
-              >
-                নামাজ
-              </li>
-            </Link>
-            <Link to="/duya">
-              <li
-                onClick={() => setNav(false)}
-                className="hover:text-[#38BDF8] rounded-lg p-2 my-2"
-              >
-                {" "}
-                দোয়া
-              </li>
-            </Link>{" "}
-            <Link to="/jikir">
-              <li
-                onClick={() => setNav(false)}
-                className="hover:text-[#38BDF8] rounded-lg p-2 my-2"
-              >
-                যিক্‌র
-              </li>
-            </Link>
-            <Link to="/hadis">
-              <li
-                onClick={() => setNav(false)}
-                className="hover:text-[#38BDF8] rounded-lg p-2 my-2"
-              >
-                হাদিস
-              </li>
-            </Link>
-            <Link to="/sura">
-              <li
-                onClick={() => setNav(false)}
-                className="hover:text-[#38BDF8] rounded-lg p-2 my-2"
-              >
-                {" "}
-                সূরা
-              </li>
-            </Link>
-            <Link to="/quran">
-              <li
-                onClick={() => setNav(false)}
-                className="hover:text-[#38BDF8] rounded-lg p-2 my-2"
-              >
-                {" "}
-                কোরআন পড়ুন
-              </li>
-            </Link>
-            <Link to="/allah">
-              <li
-                onClick={() => setNav(false)}
-                className="hover:text-[#38BDF8] rounded-lg p-1 my-2"
-              >
-                {" "}
-                আল্লাহর নাম
-              </li>
-            </Link>
+            {phoneNavbarNames.map((navName) => {
+              return (
+                <Link to={navName.link} key={navName.id}>
+                  <li
+                    className="hover:text-[#38BDF8] rounded-lg p-2 my-2"
+                    onClick={() => setNav(false)}
+                  >
+                    {navName.name}
+                  </li>
+                </Link>
+              );
+            })}
           </ul>
         </div>
       </div>

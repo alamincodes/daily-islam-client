@@ -3,14 +3,10 @@ import { FiSend } from "react-icons/fi";
 const Opinion = () => {
   return (
     <section>
-
       <div className="text-black flex flex-col justify-center items-center">
-      <h2 className="text-[1.875rem] sm:text-2xl font-bold text-white my-10">
+        <h2 className="lg:text-4xl md:text-4xl sm:text-2xl font-bold text-white my-10">
           {" "}
-          আপানার <span className="text-[#38BDF8] ">
-            মতামত
-          </span>{" "}
-          দিন
+          আপানার <span className="text-[#38BDF8] ">মতামত</span> দিন
         </h2>
         <form
           action="https://formsubmit.co/mdalamincodes@gmail.com"
@@ -18,7 +14,7 @@ const Opinion = () => {
         >
           {/* <div className="flex flex-col"> */}
           <div className="flex flex-col">
-            <label className="text-white text-sm"> আপানার ইমেল দিন *</label>
+            <label className="text-white text-sm"> আপানার ইমেল দিন <span className="text-[#38bdf8]">*</span></label>
             <input
               type="email"
               placeholder="আপানার ইমেল দিন "
@@ -28,7 +24,7 @@ const Opinion = () => {
               required
             />
             {/* </div> */}
-            <label className="text-white text-sm"> আপনার মতামত দিন *</label>
+            <label className="text-white text-sm"> আপনার মতামত দিন <span className="text-[#38bdf8]">*</span></label>
             <textarea
               className="my-3"
               placeholder="আপনার মতামত দিন"
@@ -38,7 +34,11 @@ const Opinion = () => {
               rows="2"
               required
             ></textarea>
-            <input type="hidden" name="_next" value="https://dailyislam.xyz/thankyou"></input>
+            <input
+              type="hidden"
+              name="_next"
+              value="https://dailyislam.xyz/thankyou"
+            ></input>
             <input type="hidden" name="_captcha" value="false"></input>
           </div>
           <button

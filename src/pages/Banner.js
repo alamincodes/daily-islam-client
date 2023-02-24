@@ -11,18 +11,18 @@ const Banner = () => {
             আস-সালামু আলাইকুম
           </span>
 
-          <span className="font-bold text-center md:text-[20px] sm:text-[18px] ">
+          <span className="font-normal text-center md:text-[20px] sm:text-[18px] ">
             "হে ঈমানদারগন! তোমরা{" "}
             <span className="text-[#38bdf8]">আল্লাহকে</span> অধিক পরিমানে স্মরন
             করো। আর সকাল-সন্ধায় তার{" "}
-            <span className="text-[#05ff58]">পবিত্রতা ঘোষনা করো।</span>"
+            <span className="text-[#38bdf8]">পবিত্রতা ঘোষনা করো।</span>"
           </span>
         </div>
         {/* right */}
-        <div className="md:w-[50%] mx-1">
+        <div className="lg:max-w-[600px] md:max-w-[400px] mx-1">
           <img
             src={BannerBg}
-            className=" img-banner  sha aspect-video md:rounded-2xl sm:rounded-none"
+            className="img-banner md:rounded-2xl sm:rounded-none"
             draggable="false"
             alt=""
           />

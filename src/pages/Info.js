@@ -5,7 +5,7 @@ import namajSvg from "../Images/info-img/namaj.svg";
 import quranSvg from "../Images/info-img/quran.svg";
 const Info = () => {
   return (
-    <div className="mt-24">
+    <div className="lg:my-28 mt-20">
       <div className="max-w-[300px] text-center mx-auto">
         <h2 className="lg:text-[1.875rem] sm:text-2xl font-bold text-white ">
           {" "}
