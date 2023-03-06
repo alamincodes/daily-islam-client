@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { HiArrowNarrowUp } from "react-icons/hi";
+import { BsArrowUp } from "react-icons/bs";
 const GoToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
   const goToTopBtn = () => {
@@ -27,7 +27,7 @@ const GoToTop = () => {
           className="bg-[#38bdf8] right-5 bottom-10  w-[40px] h-[40px] fixed  rounded-[10px] z-[2] flex items-center justify-center"
           onClick={goToTopBtn}
         >
-          <HiArrowNarrowUp />
+          <BsArrowUp />
         </button>
       )}
     </div>

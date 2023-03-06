@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { HiChevronUp } from "react-icons/hi";
 
 const Sondha = ({ evening, index }) => {
   const { text, title, jikirArbi, jikirBangla, meaning, read, detail } =
@@ -44,16 +45,12 @@ const Sondha = ({ evening, index }) => {
             <h2>{read}</h2>
           </div>
         )}
+        {/* see more button */}
         <div className="flex justify-end text-[15px]">
-          {modal ? (
-            <button className="text-[#38bdf8]" onClick={toggleModal}>
-              close
-            </button>
-          ) : (
-            <button className="text-[#38bdf8]" onClick={toggleModal}>
-              see more
-            </button>
-          )}
+        <button className="text-[#38bdf8] flex items-center" onClick={toggleModal}>
+            {modal ? "close" : "see more"}
+            {modal ? <HiChevronUp className=" duration-300" size={19}/> : <HiChevronUp className="rotate-180 duration-300 mt-[3px]" size={19}/>}
+          </button>
         </div>
 
         {modal && (

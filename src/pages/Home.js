@@ -12,15 +12,17 @@ import WallpapersCard from "./Wallpaper/WallpapersCard";
 const home = () => {
   return (
     <div>
-        <div><Banner/></div>
-        {/* <div className="md:block sm:hidden "><MainBanner/></div> */}
-        <Info/>
-        <Cards/>
-        <QuranScetion/>
-        <HadithDownloadCard/>
-        <WallpapersCard/>
-        <Faq/>
-        <Opinion/>
+      <div>
+        <Banner />
+      </div>
+      {/* <div className="md:block sm:hidden "><MainBanner/></div> */}
+      <Info />
+      <Cards />
+      <QuranScetion />
+      <HadithDownloadCard />
+      <WallpapersCard />
+      <Faq />
+      <Opinion />
     </div>
   );
 };

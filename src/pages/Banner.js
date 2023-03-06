@@ -19,7 +19,7 @@ const Banner = () => {
           </span>
         </div>
         {/* right */}
-        <div className="lg:max-w-[600px] md:max-w-[400px] mx-1">
+        <div className="lg:max-w-[600px] md:max-w-[400px] h-full mx-1">
           <img
             src={BannerBg}
             className="img-banner md:rounded-2xl sm:rounded-none"

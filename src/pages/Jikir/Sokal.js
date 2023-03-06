@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { HiChevronUp } from "react-icons/hi";
 const Sokal = ({ day, index }) => {
   const { text, title, jikirBangla, jikirArbi, meaning, read, detail } = day;
   const [modal, setModal] = useState(false);
@@ -46,19 +46,12 @@ const Sokal = ({ day, index }) => {
             <h2>{read}</h2>
           </div>
         )}
+        {/* see more button */}
         <div className="flex justify-end text-[15px]">
-          {modal ? (
-            <button className="text-[#38bdf8]" onClick={toggleModal}>
-              close
-            </button>
-          ) : (
-            <button
-              className="text-[#38bdf8]"
-              onClick={toggleModal}
-            >
-              see more
-            </button>
-          )}
+          <button className="text-[#38bdf8] flex items-center" onClick={toggleModal}>
+            {modal ? "close" : "see more"}
+            {modal ? <HiChevronUp className=" duration-300" size={19}/> : <HiChevronUp className="rotate-180 duration-300 mt-[3px]" size={19}/>}
+          </button>
         </div>
 
         {modal && (
