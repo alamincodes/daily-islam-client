@@ -6,6 +6,7 @@ import Duya from "../Images/icons/duya.svg";
 import Allah from "../Images/icons/allah.svg";
 import Sura from "../Images/icons/surah.svg";
 import { Link } from "react-router-dom";
+import HomToRamadan from "./ramadan/HomToRamadan";
 
 const Cards = () => {
   const cards = [
@@ -76,6 +77,8 @@ const Cards = () => {
           </button>
         </Link>
       </div>
+      {/* -------ramadan------- */}
+      <HomToRamadan />
       {/* ---------cards-------- */}
       <div className="select-none grid text-black lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 lg:gap-4 md:gap-4 gap-3 my-5">
         {cards.map((card) => (

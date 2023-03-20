@@ -7,7 +7,7 @@ const ModalVideos = ({ video }) => {
 
   return (
     <div className="flex justify-between text-[#38BDF8] items-center bg-[#0B1120] py-4 rounded-lg px-2 md:text-2xl sm:text-[18px] my-3">
-      <h3>{video.name}</h3>
+      <h3 className="pl-2">{video.name}</h3>
       <ModalVideo
         channel="youtube"
         autoplay

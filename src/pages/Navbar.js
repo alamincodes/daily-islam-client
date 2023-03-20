@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
-
-import Logo from "../Images/icons/logo.svg";
+import newLogo from "../Images/newLogo.svg";
+// import Logo from "../Images/icons/logo.svg";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
@@ -39,13 +39,8 @@ const Navbar = () => {
       <div className=" max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
         {/* nav logo */}
         <NavLink to="/">
-          <div className="select-none text-black ">
-            <h1 className="md:text-3xl font-secondary sm:text-2xl font-bold text-white flex items-center">
-              {" "}
-              <span>DAILY</span>{" "}
-              <img src={Logo} draggable="false" className="w-12 " alt="" />
-              <span>ISLAM</span>
-            </h1>
+          <div>
+            <img src={newLogo} className="h-20 w-20 bg-cover " alt="" />
           </div>
         </NavLink>
         {/* top nav */}
