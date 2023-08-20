@@ -2,32 +2,33 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import Loading from "../Loading";
 import HadithName from "./HadithName";
+import { Link } from "react-router-dom";
 const Hadis = () => {
-  const [hadiths, setHdith] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [chapterNo, setChapterNo] = useState(1);
+  // const [hadiths, setHdith] = useState([]);
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [chapterNo, setChapterNo] = useState(1);
 
-  const apiGet = () => {
-    setIsLoading(true);
-    fetch(`https://alquranbd.com/api/hadith/bukhari/${chapterNo}`)
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data);
-        setHdith(data);
-        setIsLoading(false);
-      });
-  };
+  // const apiGet = () => {
+  //   setIsLoading(true);
+  //   fetch(`https://alquranbd.com/api/hadith/bukhari/${chapterNo}`)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       // console.log(data);
+  //       setHdith(data);
+  //       setIsLoading(false);
+  //     });
+  // };
 
-  useEffect(() => {
-    apiGet();
-  }, [chapterNo]);
+  // useEffect(() => {
+  //   apiGet();
+  // }, [chapterNo]);
 
-  if (isLoading) {
-    return <Loading />;
-  }
+  // if (isLoading) {
+  //   return <Loading />;
+  // }
   return (
-    <div className="mt-24">
-      <h2 className="text-white text-[18px] text-right">
+    <div className="mt-24 flex justify-center items-center h-[800px]">
+      {/* <h2 className="text-white text-[18px] text-right">
         <span className="bg-[#38BDF8] px-5 rounded-full">
           Page No: {chapterNo}
         </span>
@@ -58,7 +59,15 @@ const Hadis = () => {
       </div>
       {hadiths.map((hadith) => (
         <HadithName key={hadith.id} hadith={hadith} />
-      ))}
+      ))} */}
+      <div className="bg-neutral-700 p-5 text-white">
+        <p>কারিগরি ত্রুটির কারণে পেইজটি বন্ধ আছে।</p>
+        <Link to="/" className="flex justify-center mt-2">
+          <button className="bg-[#38BDF8] w-full text-md rounded py-2 px-4">
+            হোমে
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

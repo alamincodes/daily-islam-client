@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const RamadanQnaAdd = () => {
+const ZakatAdd = () => {
   const [error, setError] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,7 +15,7 @@ const RamadanQnaAdd = () => {
       return;
     }
 
-    fetch("https://daily-islam-server.vercel.app/ramadanqna", {
+    fetch("https://daily-islam-server.vercel.app/zakat", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -57,4 +57,4 @@ const RamadanQnaAdd = () => {
   );
 };
 
-export default RamadanQnaAdd;
+export default ZakatAdd;

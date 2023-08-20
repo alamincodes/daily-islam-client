@@ -29,6 +29,8 @@ import Admin from "./pages/Admin";
 import AdminPage from "./pages/AdminPage";
 import RamadanQnaAdd from "./pages/ramadan/RamadanQnaAdd";
 import RamadanQna from "./pages/ramadan/RamadanQna";
+import RamadanZakat from "./pages/ramadan/RamadanZakat";
+import ZakatAdd from "./pages/ramadan/ZakatAdd";
 function App() {
   return (
     <StrictMode>
@@ -55,6 +57,8 @@ function App() {
             <Route path="/ramadan/payers/add" element={<RamadanAdd />} />
             <Route path="/ramadanQna" element={<RamadanQna />} />
             <Route path="/ramadan/qna/add" element={<RamadanQnaAdd />} />
+            <Route path="/ramadanZakat" element={<RamadanZakat />} />
+            <Route path="/ramadanZakat/qna/add" element={<ZakatAdd />} />
             <Route path="/thankyou" element={<ThankyouPage />} />
             {/* jikir nested route */}
             <Route path="/jikir" element={<Jikir />}>

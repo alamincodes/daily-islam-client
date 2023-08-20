@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { HiOutlinePlay } from "react-icons/hi";
 import ModalVideo from "react-modal-video";
-import "../../videoModal.scss";
-const QnaCard = ({ q }) => {
+import { HiOutlinePlay } from "react-icons/hi";
+
+const ZakatCard = ({ q }) => {
   const [isOpen, setOpen] = useState(false);
 
   return (
@@ -30,4 +30,4 @@ const QnaCard = ({ q }) => {
   );
 };
 
-export default QnaCard;
+export default ZakatCard;

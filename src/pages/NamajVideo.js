@@ -2,11 +2,7 @@ import React from "react";
 import Namajduya from "../NamajDuya.json";
 import NamajDuya from "./NamajDuya";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPlay,
-  faArrowRight,
-  faArrowLeft,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import ModalVideos from "./ModalVideos";
 

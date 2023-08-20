@@ -20,7 +20,7 @@ const Ramadan = () => {
       id: 3,
       title:
         "জেনে নিন যাকাত দেওয়ার নিওম ও যাকাত কাকে দেওয়া যাবে এবং কখন জাকাত ফরয হয়",
-      link: "",
+      link: "/ramadanzakat",
       buttonText: "জেনে নিন",
     },
   ];

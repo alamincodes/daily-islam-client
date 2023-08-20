@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Loading from "../Loading";
-import QnaCard from "./QnaCard";
+import ZakatCard from "./ZakatCard";
 
-const RamadanQna = () => {
+const RamadanZakat = () => {
   const [qna, setQna] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://daily-islam-server.vercel.app/ramadanqna")
+    fetch("https://daily-islam-server.vercel.app/zakat")
       .then((res) => res.json())
       .then((data) => {
         setQna(data);
@@ -21,10 +21,10 @@ const RamadanQna = () => {
   return (
     <div className="grid md:grid-cols-4 grid-cols-1 gap-4 mt-[100px]">
       {qna.map((q) => (
-        <QnaCard key={q._id} q={q} />
+        <ZakatCard key={q._id} q={q} />
       ))}
     </div>
   );
 };
 
-export default RamadanQna;
+export default RamadanZakat;
